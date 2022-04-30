@@ -1,7 +1,7 @@
-import { isUndefined } from '../guards/isUndefined';
-import { AssertionError } from '../internal/AssertionError';
+import { isUndefined } from '../../guards/type/isUndefined';
+import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotUndefined } from '../aliases/NotUndefined';
+import type { NotUndefined } from '../../aliases/NotUndefined';
 
 function assertIsNotUndefined<T>(value: T): asserts value is NotUndefined<T> {
     if (isUndefined(value)) {

@@ -1,4 +1,4 @@
-import { isNullish } from '../../src/guards/isNullish';
+import { isNullish } from '../../src/guards/type/isNullish';
 
 test('Given a non-nullish input, returns false', () => {
     expect(isNullish('foo')).toBe(false);

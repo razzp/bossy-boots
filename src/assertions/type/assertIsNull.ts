@@ -1,5 +1,5 @@
-import { isNotNull } from '../guards/isNotNull';
-import { AssertionError } from '../internal/AssertionError';
+import { isNotNull } from '../../guards/type/isNotNull';
+import { AssertionError } from '../../internal/AssertionError';
 
 function assertIsNull(value: unknown): asserts value is null {
     if (isNotNull(value)) {

@@ -1,7 +1,7 @@
-import { isNotNullish } from '../guards/isNotNullish';
-import { AssertionError } from '../internal/AssertionError';
+import { isNotNullish } from '../../guards/type/isNotNullish';
+import { AssertionError } from '../../internal/AssertionError';
 
-import type { Nullish } from '../aliases/Nullish';
+import type { Nullish } from '../../aliases/Nullish';
 
 function assertIsNullish<T>(value: T): asserts value is Nullish<T> {
     if (isNotNullish(value)) {

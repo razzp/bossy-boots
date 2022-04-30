@@ -1,4 +1,4 @@
-import { assertIsUndefined } from '../../src/assertions/assertIsUndefined';
+import { assertIsUndefined } from '../../src/assertions/type/assertIsUndefined';
 import { AssertionError } from '../../src/internal/AssertionError';
 
 test('Given a non-undefined input, throws', () => {

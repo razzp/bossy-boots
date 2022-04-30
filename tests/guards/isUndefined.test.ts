@@ -1,4 +1,4 @@
-import { isUndefined } from '../../src/guards/isUndefined';
+import { isUndefined } from '../../src/guards/type/isUndefined';
 
 test('Given a non-undefined input, returns false', () => {
     expect(isUndefined('foo')).toBe(false);

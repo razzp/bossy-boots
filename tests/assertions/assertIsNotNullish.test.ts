@@ -1,4 +1,4 @@
-import { assertIsNotNullish } from '../../src/assertions/assertIsNotNullish';
+import { assertIsNotNullish } from '../../src/assertions/type/assertIsNotNullish';
 import { AssertionError } from '../../src/internal/AssertionError';
 
 test('Given a non-nullish input, does not throw', () => {

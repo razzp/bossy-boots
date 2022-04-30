@@ -1,4 +1,4 @@
-import { assertIsNotNull } from '../../src/assertions/assertIsNotNull';
+import { assertIsNotNull } from '../../src/assertions/type/assertIsNotNull';
 import { AssertionError } from '../../src/internal/AssertionError';
 
 test('Given a non-null input, does not throw', () => {

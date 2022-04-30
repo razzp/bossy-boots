@@ -2,15 +2,6 @@
 
 export { assert } from './assertions/assert';
 
-export { assertIsNull } from './assertions/assertIsNull';
-export { assertIsNotNull } from './assertions/assertIsNotNull';
-
-export { assertIsNullish } from './assertions/assertIsNullish';
-export { assertIsNotNullish } from './assertions/assertIsNotNullish';
-
-export { assertIsUndefined } from './assertions/assertIsUndefined';
-export { assertIsNotUndefined } from './assertions/assertIsNotUndefined';
-
 // Assertions > Instance
 
 export { assertIsInstanceOf } from './assertions/instance/assertIsInstanceOf';
@@ -24,16 +15,14 @@ export { assertIsNotElement } from './assertions/instance/assertIsNotElement';
 export { assertIsTypeOf } from './assertions/type/assertIsTypeOf';
 export { assertIsNotTypeOf } from './assertions/type/assertIsNotTypeOf';
 
-// Guards
+export { assertIsNull } from './assertions/type/assertIsNull';
+export { assertIsNotNull } from './assertions/type/assertIsNotNull';
 
-export { isNull } from './guards/isNull';
-export { isNotNull } from './guards/isNotNull';
+export { assertIsNullish } from './assertions/type/assertIsNullish';
+export { assertIsNotNullish } from './assertions/type/assertIsNotNullish';
 
-export { isNullish } from './guards/isNullish';
-export { isNotNullish } from './guards/isNotNullish';
-
-export { isUndefined } from './guards/isUndefined';
-export { isNotUndefined } from './guards/isNotUndefined';
+export { assertIsUndefined } from './assertions/type/assertIsUndefined';
+export { assertIsNotUndefined } from './assertions/type/assertIsNotUndefined';
 
 // Guards > Instance
 
@@ -47,6 +36,15 @@ export { isNotElement } from './guards/instance/isNotElement';
 
 export { isTypeOf } from './guards/type/isTypeOf';
 export { isNotTypeOf } from './guards/type/isNotTypeOf';
+
+export { isNull } from './guards/type/isNull';
+export { isNotNull } from './guards/type/isNotNull';
+
+export { isNullish } from './guards/type/isNullish';
+export { isNotNullish } from './guards/type/isNotNullish';
+
+export { isUndefined } from './guards/type/isUndefined';
+export { isNotUndefined } from './guards/type/isNotUndefined';
 
 // Utils
 

@@ -1,7 +1,7 @@
-import { isNull } from '../guards/isNull';
-import { AssertionError } from '../internal/AssertionError';
+import { isNull } from '../../guards/type/isNull';
+import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotNull } from '../aliases/NotNull';
+import type { NotNull } from '../../aliases/NotNull';
 
 function assertIsNotNull<T>(value: T): asserts value is NotNull<T> {
     if (isNull(value)) {
