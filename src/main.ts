@@ -5,6 +5,9 @@ export { assert } from './assertions/assert';
 export { assertIsNull } from './assertions/assertIsNull';
 export { assertIsNotNull } from './assertions/assertIsNotNull';
 
+export { assertIsNullish } from './assertions/assertIsNullish';
+export { assertIsNotNullish } from './assertions/assertIsNotNullish';
+
 export { assertIsUndefined } from './assertions/assertIsUndefined';
 export { assertIsNotUndefined } from './assertions/assertIsNotUndefined';
 
@@ -25,6 +28,9 @@ export { assertIsNotTypeOf } from './assertions/type/assertIsNotTypeOf';
 
 export { isNull } from './guards/isNull';
 export { isNotNull } from './guards/isNotNull';
+
+export { isNullish } from './guards/isNullish';
+export { isNotNullish } from './guards/isNotNullish';
 
 export { isUndefined } from './guards/isUndefined';
 export { isNotUndefined } from './guards/isNotUndefined';
