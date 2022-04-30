@@ -1,7 +1,7 @@
 import { assertIsNull } from '../../src/assertions/assertIsNull';
 import { AssertionError } from '../../src/internal/AssertionError';
 
-test('Given a defined input, throws', () => {
+test('Given a non-null input, throws', () => {
     expect(() => assertIsNull('foo')).toThrowError(AssertionError);
 });
 

@@ -5,7 +5,7 @@ import type { NotUndefined } from '../aliases/NotUndefined';
 
 function assertIsNotUndefined<T>(value: T): asserts value is NotUndefined<T> {
     if (isUndefined(value)) {
-        throw new AssertionError('Value is not defined.');
+        throw new AssertionError('Value is undefined.');
     }
 }
 

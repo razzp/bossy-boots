@@ -1,7 +1,7 @@
 import { assertIsUndefined } from '../../src/assertions/assertIsUndefined';
 import { AssertionError } from '../../src/internal/AssertionError';
 
-test('Given a defined input, throws', () => {
+test('Given a non-undefined input, throws', () => {
     expect(() => assertIsUndefined('foo')).toThrowError(AssertionError);
 });
 

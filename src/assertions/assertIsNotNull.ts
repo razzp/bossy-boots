@@ -5,7 +5,7 @@ import type { NotNull } from '../aliases/NotNull';
 
 function assertIsNotNull<T>(value: T): asserts value is NotNull<T> {
     if (isNull(value)) {
-        throw new AssertionError('Value is not defined.');
+        throw new AssertionError('Value is null.');
     }
 }
 
