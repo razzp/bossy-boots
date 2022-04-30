@@ -2,8 +2,8 @@
 
 export { assert } from './assertions/assert';
 
-export { assertIsNotUndefined } from './assertions/assertIsNotUndefined';
 export { assertIsUndefined } from './assertions/assertIsUndefined';
+export { assertIsNotUndefined } from './assertions/assertIsNotUndefined';
 
 // Assertions > Instance
 
@@ -20,8 +20,8 @@ export { assertIsNotTypeOf } from './assertions/type/assertIsNotTypeOf';
 
 // Guards
 
-export { isNotUndefined } from './guards/isNotUndefined';
 export { isUndefined } from './guards/isUndefined';
+export { isNotUndefined } from './guards/isNotUndefined';
 
 // Guards > Instance
 
