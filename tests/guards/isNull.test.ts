@@ -1,7 +1,8 @@
 import { isNull } from '../../src/guards/isNull';
 
-test('Given a defined input, returns false', () => {
+test('Given a non-null input, returns false', () => {
     expect(isNull('foo')).toBe(false);
+    expect(isNull(undefined)).toBe(false);
 });
 
 test('Given a null input, returns true', () => {
