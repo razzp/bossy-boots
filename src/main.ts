@@ -33,6 +33,9 @@ export { assertIsNotNumber } from './assertions/type/assertIsNotNumber';
 export { assertIsString } from './assertions/type/assertIsString';
 export { assertIsNotString } from './assertions/type/assertIsNotString';
 
+export { assertIsSymbol } from './assertions/type/assertIsSymbol';
+export { assertIsNotSymbol } from './assertions/type/assertIsNotSymbol';
+
 export { assertIsUndefined } from './assertions/type/assertIsUndefined';
 export { assertIsNotUndefined } from './assertions/type/assertIsNotUndefined';
 
@@ -66,6 +69,9 @@ export { isNotNumber } from './guards/type/isNotNumber';
 
 export { isString } from './guards/type/isString';
 export { isNotString } from './guards/type/isNotString';
+
+export { isSymbol } from './guards/type/isSymbol';
+export { isNotSymbol } from './guards/type/isNotSymbol';
 
 export { isUndefined } from './guards/type/isUndefined';
 export { isNotUndefined } from './guards/type/isNotUndefined';
