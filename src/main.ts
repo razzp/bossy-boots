@@ -30,6 +30,9 @@ export { assertIsNotNullish } from './assertions/type/assertIsNotNullish';
 export { assertIsNumber } from './assertions/type/assertIsNumber';
 export { assertIsNotNumber } from './assertions/type/assertIsNotNumber';
 
+export { assertIsString } from './assertions/type/assertIsString';
+export { assertIsNotString } from './assertions/type/assertIsNotString';
+
 export { assertIsUndefined } from './assertions/type/assertIsUndefined';
 export { assertIsNotUndefined } from './assertions/type/assertIsNotUndefined';
 
@@ -60,6 +63,9 @@ export { isNotNullish } from './guards/type/isNotNullish';
 
 export { isNumber } from './guards/type/isNumber';
 export { isNotNumber } from './guards/type/isNotNumber';
+
+export { isString } from './guards/type/isString';
+export { isNotString } from './guards/type/isNotString';
 
 export { isUndefined } from './guards/type/isUndefined';
 export { isNotUndefined } from './guards/type/isNotUndefined';
