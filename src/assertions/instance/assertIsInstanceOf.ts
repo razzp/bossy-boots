@@ -9,9 +9,11 @@ function assertIsInstanceOf<TInstances extends Function[]>(
     ...instances: TInstances
 ): asserts value is InstanceOf<TInstances> {
     if (isNotInstanceOf(value, ...instances)) {
-        const expected = toReadableList(instances.map(({ name }) => name));
-
-        throw new AssertionError(`Value should be ${expected}`);
+        throw new AssertionError(
+            `Value should be ${toReadableList(
+                instances.map(({ name }) => name)
+            )}`
+        );
     }
 }
 
