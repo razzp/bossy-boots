@@ -15,6 +15,9 @@ export { assertIsNotElement } from './assertions/instance/assertIsNotElement';
 export { assertIsTypeOf } from './assertions/type/assertIsTypeOf';
 export { assertIsNotTypeOf } from './assertions/type/assertIsNotTypeOf';
 
+export { assertIsBoolean } from './assertions/type/assertIsBoolean';
+export { assertIsNotBoolean } from './assertions/type/assertIsNotBoolean';
+
 export { assertIsNull } from './assertions/type/assertIsNull';
 export { assertIsNotNull } from './assertions/type/assertIsNotNull';
 
@@ -36,6 +39,9 @@ export { isNotElement } from './guards/instance/isNotElement';
 
 export { isTypeOf } from './guards/type/isTypeOf';
 export { isNotTypeOf } from './guards/type/isNotTypeOf';
+
+export { isBoolean } from './guards/type/isBoolean';
+export { isNotBoolean } from './guards/type/isNotBoolean';
 
 export { isNull } from './guards/type/isNull';
 export { isNotNull } from './guards/type/isNotNull';
