@@ -1,4 +1,4 @@
-import { isNull } from '../../src/guards/type/isNull';
+import { isNull } from '../../../src/guards/type/isNull';
 
 test('Given a non-null input, returns false', () => {
     expect(isNull('foo')).toBe(false);

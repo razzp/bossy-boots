@@ -1,5 +1,5 @@
-import { assertIsNullish } from '../../src/assertions/type/assertIsNullish';
-import { AssertionError } from '../../src/internal/AssertionError';
+import { assertIsNullish } from '../../../src/assertions/type/assertIsNullish';
+import { AssertionError } from '../../../src/internal/AssertionError';
 
 test('Given a non-nullish input, throws', () => {
     expect(() => assertIsNullish('foo')).toThrowError(AssertionError);
