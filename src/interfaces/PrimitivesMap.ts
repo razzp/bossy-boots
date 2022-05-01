@@ -1,12 +1,11 @@
-interface TypeMap {
+interface PrimitivesMap {
     boolean: boolean;
     bigint: bigint;
-    function: Function;
-    object: object;
     number: number;
     string: string;
     symbol: symbol;
+    null: null;
     undefined: undefined;
 }
 
-export { TypeMap };
+export { PrimitivesMap };

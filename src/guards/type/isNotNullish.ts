@@ -1,8 +1,10 @@
 import { isNullish } from './isNullish';
 
-import type { NotNullish } from '../../aliases/NotNullish';
+import type { NotTypeOf } from '../../aliases/NotTypeOf';
 
-function isNotNullish<T>(value: T): value is NotNullish<T> {
+function isNotNullish<TValue>(
+    value: TValue
+): value is NotTypeOf<TValue, 'null' | 'undefined'> {
     return !isNullish(value);
 }
 

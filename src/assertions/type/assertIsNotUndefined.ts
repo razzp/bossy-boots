@@ -1,9 +1,11 @@
 import { isUndefined } from '../../guards/type/isUndefined';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotUndefined } from '../../aliases/NotUndefined';
+import type { NotTypeOf } from '../../aliases/NotTypeOf';
 
-function assertIsNotUndefined<T>(value: T): asserts value is NotUndefined<T> {
+function assertIsNotUndefined<TValue>(
+    value: TValue
+): asserts value is NotTypeOf<TValue, 'undefined'> {
     if (isUndefined(value)) {
         throw new AssertionError('Value is undefined.');
     }

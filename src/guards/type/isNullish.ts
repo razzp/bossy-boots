@@ -1,6 +1,8 @@
-import type { Nullish } from '../../aliases/Nullish';
+import type { TypeOf } from '../../aliases/TypeOf';
 
-function isNullish<T>(value: T): value is Nullish<T> {
+function isNullish<TValue>(
+    value: TValue
+): value is TypeOf<TValue, 'null' | 'undefined'> {
     return value === null || value === undefined;
 }
 

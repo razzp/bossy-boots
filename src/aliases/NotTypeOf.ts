@@ -1,5 +1,5 @@
-import type { TypeOf } from './TypeOf';
+import type { GetTypes } from './GetTypes';
 
-type NotTypeOf<T, U> = T extends TypeOf<U> ? never : T;
+type NotTypeOf<TValue, TTypes> = Exclude<TValue, GetTypes<TTypes>>;
 
 export { NotTypeOf };

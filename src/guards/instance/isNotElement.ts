@@ -1,6 +1,10 @@
 import { isElement } from './isElement';
 
-function isNotElement<T>(value: T): value is Exclude<T, Element> {
+import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
+
+function isNotElement<TValue>(
+    value: TValue
+): value is NotInstanceOf<TValue, typeof Element> {
     return !isElement(value);
 }
 

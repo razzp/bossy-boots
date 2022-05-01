@@ -1,9 +1,5 @@
-import type { TypeMap } from '../interfaces/TypeMap';
+import type { GetTypes } from './GetTypes';
 
-type TypeOf<T> = T extends Array<infer U>
-    ? U extends keyof TypeMap
-        ? TypeMap[U]
-        : never
-    : never;
+type TypeOf<TValue, TTypes> = Extract<TValue, GetTypes<TTypes>>;
 
 export { TypeOf };

@@ -4,12 +4,12 @@ import { toReadableList } from '../../internal/toReadableList';
 
 import type { InstanceOf } from '../../aliases/InstanceOf';
 
-function assertIsInstanceOf<T extends Function[]>(
-    value: unknown,
-    ...funcs: T
-): asserts value is InstanceOf<T> {
-    if (isNotInstanceOf(value, ...funcs)) {
-        const expected = toReadableList(funcs.map((func) => func.name));
+function assertIsInstanceOf<TValue, TInstances extends Function[]>(
+    value: TValue,
+    ...instances: TInstances
+): asserts value is InstanceOf<TValue, TInstances> {
+    if (isNotInstanceOf(value, ...instances)) {
+        const expected = toReadableList(instances.map(({ name }) => name));
 
         throw new AssertionError(`Value should be an instance of ${expected}.`);
     }

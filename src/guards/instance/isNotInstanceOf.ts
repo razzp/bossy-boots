@@ -2,11 +2,11 @@ import { isInstanceOf } from './isInstanceOf';
 
 import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
 
-function isNotInstanceOf<T, U extends Function[]>(
-    value: T,
-    ...funcs: U
-): value is NotInstanceOf<T, U> {
-    return !isInstanceOf(value, ...funcs);
+function isNotInstanceOf<TValue, TInstances extends Function[]>(
+    value: TValue,
+    ...instances: TInstances
+): value is NotInstanceOf<TValue, TInstances> {
+    return !isInstanceOf(value, ...instances);
 }
 
 export { isNotInstanceOf };

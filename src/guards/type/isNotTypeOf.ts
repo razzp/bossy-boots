@@ -1,12 +1,12 @@
 import { isTypeOf } from './isTypeOf';
 
 import type { NotTypeOf } from '../../aliases/NotTypeOf';
-import type { TypeMap } from '../../interfaces/TypeMap';
+import type { PrimitivesMap } from '../../interfaces/PrimitivesMap';
 
-function isNotTypeOf<T, U extends (keyof TypeMap)[]>(
-    value: T,
-    ...types: U
-): value is NotTypeOf<T, U> {
+function isNotTypeOf<TValue, TTypes extends (keyof PrimitivesMap)[]>(
+    value: TValue,
+    ...types: TTypes
+): value is NotTypeOf<TValue, TTypes> {
     return !isTypeOf(value, ...types);
 }
 

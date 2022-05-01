@@ -1,8 +1,8 @@
 import { isNull } from './isNull';
 
-import type { NotNull } from '../../aliases/NotNull';
+import type { NotTypeOf } from '../../aliases/NotTypeOf';
 
-function isNotNull<T>(value: T): value is NotNull<T> {
+function isNotNull<TValue>(value: TValue): value is NotTypeOf<TValue, 'null'> {
     return !isNull(value);
 }
 

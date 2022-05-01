@@ -1,8 +1,10 @@
 import { isUndefined } from './isUndefined';
 
-import type { NotUndefined } from '../../aliases/NotUndefined';
+import type { NotTypeOf } from '../../aliases/NotTypeOf';
 
-function isNotUndefined<T>(value: T): value is NotUndefined<T> {
+function isNotUndefined<TValue>(
+    value: TValue
+): value is NotTypeOf<TValue, 'undefined'> {
     return !isUndefined(value);
 }
 

@@ -1,5 +1,5 @@
-import type { ProtoOf } from './ProtoOf';
+import type { GetInstances } from './GetInstances';
 
-type InstanceOf<T> = T extends Array<infer U> ? ProtoOf<U> : ProtoOf<T>;
+type InstanceOf<TValue, TInstances> = Extract<TValue, GetInstances<TInstances>>;
 
 export { InstanceOf };

@@ -1,5 +1,8 @@
-import type { InstanceOf } from './InstanceOf';
+import type { GetInstances } from './GetInstances';
 
-type NotInstanceOf<T, U> = T extends InstanceOf<U> ? never : T;
+type NotInstanceOf<TValue, TInstances> = Exclude<
+    TValue,
+    GetInstances<TInstances>
+>;
 
 export { NotInstanceOf };
