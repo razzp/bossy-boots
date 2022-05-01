@@ -18,6 +18,9 @@ export { assertIsNotTypeOf } from './assertions/type/assertIsNotTypeOf';
 export { assertIsBoolean } from './assertions/type/assertIsBoolean';
 export { assertIsNotBoolean } from './assertions/type/assertIsNotBoolean';
 
+export { assertIsBigInt } from './assertions/type/assertIsBigInt';
+export { assertIsNotBigInt } from './assertions/type/assertIsNotBigInt';
+
 export { assertIsNull } from './assertions/type/assertIsNull';
 export { assertIsNotNull } from './assertions/type/assertIsNotNull';
 
@@ -42,6 +45,9 @@ export { isNotTypeOf } from './guards/type/isNotTypeOf';
 
 export { isBoolean } from './guards/type/isBoolean';
 export { isNotBoolean } from './guards/type/isNotBoolean';
+
+export { isBigInt } from './guards/type/isBigInt';
+export { isNotBigInt } from './guards/type/isNotBigInt';
 
 export { isNull } from './guards/type/isNull';
 export { isNotNull } from './guards/type/isNotNull';
