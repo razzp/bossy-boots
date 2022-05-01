@@ -7,7 +7,7 @@ function assertIsNotBigInt<TValue>(
     value: TValue
 ): asserts value is NotTypeOf<TValue, 'bigint'> {
     if (isBigInt(value)) {
-        throw new AssertionError('Value is a bigint.');
+        throw new AssertionError('Value should not be bigint');
     }
 }
 

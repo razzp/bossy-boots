@@ -7,7 +7,7 @@ function assertIsNotSymbol<TValue>(
     value: TValue
 ): asserts value is NotTypeOf<TValue, 'symbol'> {
     if (isSymbol(value)) {
-        throw new AssertionError('Value is a symbol.');
+        throw new AssertionError('Value should not be symbol');
     }
 }
 

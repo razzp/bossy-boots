@@ -3,7 +3,7 @@ import { AssertionError } from '../../internal/AssertionError';
 
 function assertIsSymbol(value: unknown): asserts value is symbol {
     if (isNotSymbol(value)) {
-        throw new AssertionError('Value should be a symbol.');
+        throw new AssertionError('Value should be symbol');
     }
 }
 

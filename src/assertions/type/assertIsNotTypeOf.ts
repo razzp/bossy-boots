@@ -9,9 +9,7 @@ function assertIsNotTypeOf<TValue, TTypes extends Primitive[]>(
     ...types: TTypes
 ): asserts value is NotTypeOf<TValue, TTypes> {
     if (isTypeOf(value, ...types)) {
-        throw new AssertionError(
-            `Value should not be of type ${typeof value}.`
-        );
+        throw new AssertionError(`Value should not be ${typeof value}`);
     }
 }
 

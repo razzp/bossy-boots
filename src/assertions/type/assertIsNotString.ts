@@ -7,7 +7,7 @@ function assertIsNotString<TValue>(
     value: TValue
 ): asserts value is NotTypeOf<TValue, 'string'> {
     if (isString(value)) {
-        throw new AssertionError('Value is a string.');
+        throw new AssertionError('Value should not be string');
     }
 }
 

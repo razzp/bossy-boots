@@ -7,7 +7,7 @@ function assertIsNotElement<TValue>(
     value: TValue
 ): asserts value is NotInstanceOf<TValue, typeof Element> {
     if (isElement(value)) {
-        throw new AssertionError('Value should not be an instance of Element.');
+        throw new AssertionError('Value should not be Element');
     }
 }
 

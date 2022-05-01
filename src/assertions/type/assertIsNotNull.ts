@@ -7,7 +7,7 @@ function assertIsNotNull<TValue>(
     value: TValue
 ): asserts value is NotTypeOf<TValue, 'null'> {
     if (isNull(value)) {
-        throw new AssertionError('Value is null.');
+        throw new AssertionError('Value should not be null');
     }
 }
 

@@ -3,7 +3,7 @@ import { AssertionError } from '../../internal/AssertionError';
 
 function assertIsBoolean(value: unknown): asserts value is boolean {
     if (isNotBoolean(value)) {
-        throw new AssertionError('Value should be a boolean.');
+        throw new AssertionError('Value should be boolean');
     }
 }
 

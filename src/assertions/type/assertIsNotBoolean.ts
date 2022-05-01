@@ -7,7 +7,7 @@ function assertIsNotBoolean<TValue>(
     value: TValue
 ): asserts value is NotTypeOf<TValue, 'boolean'> {
     if (isBoolean(value)) {
-        throw new AssertionError('Value is a boolean.');
+        throw new AssertionError('Value should not be boolean');
     }
 }
 

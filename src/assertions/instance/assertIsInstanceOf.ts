@@ -11,7 +11,7 @@ function assertIsInstanceOf<TInstances extends Function[]>(
     if (isNotInstanceOf(value, ...instances)) {
         const expected = toReadableList(instances.map(({ name }) => name));
 
-        throw new AssertionError(`Value should be an instance of ${expected}.`);
+        throw new AssertionError(`Value should be ${expected}`);
     }
 }
 

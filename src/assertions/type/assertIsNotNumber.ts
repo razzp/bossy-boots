@@ -7,7 +7,7 @@ function assertIsNotNumber<TValue>(
     value: TValue
 ): asserts value is NotTypeOf<TValue, 'number'> {
     if (isNumber(value)) {
-        throw new AssertionError('Value is a number.');
+        throw new AssertionError('Value should not be number');
     }
 }
 

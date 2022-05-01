@@ -3,7 +3,7 @@ import { AssertionError } from '../../internal/AssertionError';
 
 function assertIsNumber(value: unknown): asserts value is number {
     if (isNotNumber(value)) {
-        throw new AssertionError('Value should be a number.');
+        throw new AssertionError('Value should be number');
     }
 }
 

@@ -8,9 +8,7 @@ function assertIsNotInstanceOf<TValue, TInstances extends Function[]>(
     ...instances: TInstances
 ): asserts value is NotInstanceOf<TValue, TInstances> {
     if (isInstanceOf(value, ...instances)) {
-        throw new AssertionError(
-            `Value should not be an instance of ${value.name}.`
-        );
+        throw new AssertionError(`Value should not be ${value.name}`);
     }
 }
 

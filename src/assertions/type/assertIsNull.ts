@@ -3,7 +3,7 @@ import { AssertionError } from '../../internal/AssertionError';
 
 function assertIsNull(value: unknown): asserts value is null {
     if (isNotNull(value)) {
-        throw new AssertionError('Value should be null.');
+        throw new AssertionError('Value should be null');
     }
 }
 

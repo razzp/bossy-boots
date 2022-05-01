@@ -7,7 +7,7 @@ function assertIsNotUndefined<TValue>(
     value: TValue
 ): asserts value is NotTypeOf<TValue, 'undefined'> {
     if (isUndefined(value)) {
-        throw new AssertionError('Value is undefined.');
+        throw new AssertionError('Value should not be undefined');
     }
 }
 

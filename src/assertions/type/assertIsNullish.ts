@@ -3,7 +3,7 @@ import { AssertionError } from '../../internal/AssertionError';
 
 function assertIsNullish(value: unknown): asserts value is null | undefined {
     if (isNotNullish(value)) {
-        throw new AssertionError('Value should be null or undefined.');
+        throw new AssertionError('Value should be null or undefined');
     }
 }
 

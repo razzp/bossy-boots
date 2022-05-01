@@ -7,7 +7,7 @@ function assertIsNotNullish<TValue>(
     value: TValue
 ): asserts value is NotTypeOf<TValue, 'null' | 'undefined'> {
     if (isNullish(value)) {
-        throw new AssertionError(`Value is ${String(value)}.`);
+        throw new AssertionError(`Value should not be null or undefined`);
     }
 }
 

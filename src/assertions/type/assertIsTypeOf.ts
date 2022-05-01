@@ -12,7 +12,7 @@ function assertIsTypeOf<TTypes extends Primitive[]>(
     if (isNotTypeOf(value, ...types)) {
         const expected = toReadableList(types);
 
-        throw new AssertionError(`Value should be of type ${expected}.`);
+        throw new AssertionError(`Value should be ${expected}`);
     }
 }
 

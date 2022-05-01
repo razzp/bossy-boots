@@ -3,7 +3,7 @@ import { AssertionError } from '../../internal/AssertionError';
 
 function assertIsString(value: unknown): asserts value is string {
     if (isNotString(value)) {
-        throw new AssertionError('Value should be a string.');
+        throw new AssertionError('Value should be string');
     }
 }
 
