@@ -1,10 +1,10 @@
 interface PrimitivesMap {
     boolean: boolean;
     bigint: bigint;
+    null: null;
     number: number;
     string: string;
     symbol: symbol;
-    null: null;
     undefined: undefined;
 }
 
