@@ -1,7 +1,7 @@
+import type { Primitive } from '../../aliases/Primitive';
 import type { TypeOf } from '../../aliases/TypeOf';
-import type { PrimitivesMap } from '../../interfaces/PrimitivesMap';
 
-function isTypeOf<TTypes extends (keyof PrimitivesMap)[]>(
+function isTypeOf<TTypes extends Primitive[]>(
     value: unknown,
     ...types: TTypes
 ): value is TypeOf<TTypes> {

@@ -2,10 +2,10 @@ import { isNotTypeOf } from '../../guards/type/isNotTypeOf';
 import { AssertionError } from '../../internal/AssertionError';
 import { toReadableList } from '../../internal/toReadableList';
 
-import type { PrimitivesMap } from '../../interfaces/PrimitivesMap';
 import type { TypeOf } from '../../aliases/TypeOf';
+import type { Primitive } from '../../aliases/Primitive';
 
-function assertIsTypeOf<TTypes extends (keyof PrimitivesMap)[]>(
+function assertIsTypeOf<TTypes extends Primitive[]>(
     value: unknown,
     ...types: TTypes
 ): asserts value is TypeOf<TTypes> {
