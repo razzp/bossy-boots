@@ -1,8 +1,4 @@
-import type { TypeOf } from '../../aliases/TypeOf';
-
-function isNullish<TValue>(
-    value: TValue
-): value is TypeOf<TValue, 'null' | 'undefined'> {
+function isNullish(value: unknown): value is null | undefined {
     return value === null || value === undefined;
 }
 

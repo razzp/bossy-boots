@@ -1,5 +1,9 @@
-import type { GetInstances } from './GetInstances';
-
-type InstanceOf<TValue, TInstances> = Extract<TValue, GetInstances<TInstances>>;
+type InstanceOf<T> = T extends Array<infer X>
+    ? InstanceOf<X>
+    : T extends {
+          prototype: infer P;
+      }
+    ? P
+    : never;
 
 export { InstanceOf };

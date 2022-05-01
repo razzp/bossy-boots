@@ -1,8 +1,4 @@
-import type { TypeOf } from '../../aliases/TypeOf';
-
-function isUndefined<TValue>(
-    value: TValue
-): value is TypeOf<TValue, 'undefined'> {
+function isUndefined(value: unknown): value is undefined {
     return value === undefined;
 }
 

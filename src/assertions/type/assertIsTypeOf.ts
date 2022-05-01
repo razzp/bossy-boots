@@ -5,10 +5,10 @@ import { toReadableList } from '../../internal/toReadableList';
 import type { PrimitivesMap } from '../../interfaces/PrimitivesMap';
 import type { TypeOf } from '../../aliases/TypeOf';
 
-function assertIsTypeOf<TValue, TTypes extends (keyof PrimitivesMap)[]>(
-    value: TValue,
+function assertIsTypeOf<TTypes extends (keyof PrimitivesMap)[]>(
+    value: unknown,
     ...types: TTypes
-): asserts value is TypeOf<TValue, TTypes> {
+): asserts value is TypeOf<TTypes> {
     if (isNotTypeOf(value, ...types)) {
         const expected = toReadableList(types);
 

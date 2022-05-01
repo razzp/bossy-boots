@@ -1,10 +1,10 @@
 import type { TypeOf } from '../../aliases/TypeOf';
 import type { PrimitivesMap } from '../../interfaces/PrimitivesMap';
 
-function isTypeOf<TValue, TTypes extends (keyof PrimitivesMap)[]>(
-    value: TValue,
+function isTypeOf<TTypes extends (keyof PrimitivesMap)[]>(
+    value: unknown,
     ...types: TTypes
-): value is TypeOf<TValue, TTypes> {
+): value is TypeOf<TTypes> {
     return types.some((type) => typeof value === type);
 }
 

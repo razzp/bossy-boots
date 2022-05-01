@@ -1,10 +1,6 @@
 import { isInstanceOf } from './isInstanceOf';
 
-import type { InstanceOf } from '../../aliases/InstanceOf';
-
-function isElement<TValue>(
-    value: TValue
-): value is InstanceOf<TValue, typeof Element> {
+function isElement(value: unknown): value is Element {
     return isInstanceOf(value, Element);
 }
 

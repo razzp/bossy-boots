@@ -1,6 +1,4 @@
-import type { TypeOf } from '../../aliases/TypeOf';
-
-function isNull<TValue>(value: TValue): value is TypeOf<TValue, 'null'> {
+function isNull(value: unknown): value is null {
     return value === null;
 }
 

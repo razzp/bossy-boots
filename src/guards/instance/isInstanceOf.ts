@@ -1,9 +1,9 @@
 import type { InstanceOf } from '../../aliases/InstanceOf';
 
-function isInstanceOf<TValue, TInstances extends Function[]>(
-    value: TValue,
+function isInstanceOf<TInstances extends Function[]>(
+    value: unknown,
     ...instances: TInstances
-): value is InstanceOf<TValue, TInstances> {
+): value is InstanceOf<TInstances> {
     return instances.some((instance) => value instanceof instance);
 }
 
