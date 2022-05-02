@@ -12,6 +12,9 @@
     "helpers"
   ],
   "license": "MIT",
+  "bugs": "https://github.com/razzp/bossy-boots/issues",
+  "homepage": "https://github.com/razzp/bossy-boots#readme",
+  "repository": "github:razzp/bossy-boots",
   "type": "module",
   "main": "./dist/main.cjs",
   "exports": {
