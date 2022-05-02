@@ -3,11 +3,11 @@ import { AssertionError } from '../../internal/AssertionError';
 
 import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
 
-function assertIsNotInstanceOf<TValue, TInstances extends Function[]>(
+function assertIsNotInstanceOf<TValue, TPrototypes extends Function[]>(
     value: TValue,
-    ...instances: TInstances
-): asserts value is NotInstanceOf<TValue, TInstances> {
-    if (isInstanceOf(value, ...instances)) {
+    ...prototypes: TPrototypes
+): asserts value is NotInstanceOf<TValue, TPrototypes> {
+    if (isInstanceOf(value, ...prototypes)) {
         throw new AssertionError(`Value should not be ${value.name}`);
     }
 }

@@ -4,14 +4,14 @@ import { toReadableList } from '../../internal/toReadableList';
 
 import type { InstanceOf } from '../../aliases/InstanceOf';
 
-function assertIsInstanceOf<TInstances extends Function[]>(
+function assertIsInstanceOf<TPrototypes extends Function[]>(
     value: unknown,
-    ...instances: TInstances
-): asserts value is InstanceOf<TInstances> {
-    if (isNotInstanceOf(value, ...instances)) {
+    ...prototypes: TPrototypes
+): asserts value is InstanceOf<TPrototypes> {
+    if (isNotInstanceOf(value, ...prototypes)) {
         throw new AssertionError(
             `Value should be ${toReadableList(
-                instances.map(({ name }) => name)
+                prototypes.map(({ name }) => name)
             )}`
         );
     }

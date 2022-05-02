@@ -1,10 +1,10 @@
 import type { InstanceOf } from '../../aliases/InstanceOf';
 
-function isInstanceOf<TInstances extends Function[]>(
+function isInstanceOf<TPrototypes extends Function[]>(
     value: unknown,
-    ...instances: TInstances
-): value is InstanceOf<TInstances> {
-    return instances.some((instance) => value instanceof instance);
+    ...prototypes: TPrototypes
+): value is InstanceOf<TPrototypes> {
+    return prototypes.some((prototype) => value instanceof prototype);
 }
 
 export { isInstanceOf };
