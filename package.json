@@ -1,7 +1,7 @@
 {
   "name": "bossy-boots",
   "author": "Robert Wells",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A helpful collection of type guards and assertions, written in TypeScript.",
   "keywords": [
     "assertion",
