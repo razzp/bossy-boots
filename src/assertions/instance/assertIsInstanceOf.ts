@@ -4,6 +4,13 @@ import { toReadableList } from '../../internal/toReadableList';
 
 import type { InstanceOf } from '../../aliases/InstanceOf';
 
+/**
+ * Assert that value is an instance of one or more prototypes.
+ * @since 0.1.0
+ *
+ * @param {unknown} value The value to assert
+ * @param {Function[]} prototypes The prototype(s) to check
+ */
 function assertIsInstanceOf<TPrototypes extends Function[]>(
     value: unknown,
     ...prototypes: TPrototypes

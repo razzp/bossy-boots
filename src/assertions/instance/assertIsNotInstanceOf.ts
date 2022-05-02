@@ -3,6 +3,13 @@ import { AssertionError } from '../../internal/AssertionError';
 
 import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
 
+/**
+ * Assert that value is *not* an instance of one or more prototypes.
+ * @since 0.1.0
+ *
+ * @param {unknown} value The value to assert
+ * @param {Function[]} prototypes The prototype(s) to check
+ */
 function assertIsNotInstanceOf<TValue, TPrototypes extends Function[]>(
     value: TValue,
     ...prototypes: TPrototypes
