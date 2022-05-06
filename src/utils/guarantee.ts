@@ -1,36 +1,16 @@
 import { assertIsNotNullish } from '../assertions/type/assertIsNotNullish';
 
 /**
- * Guarantee that value is not `null` or `undefined`.
+ * Guarantee that a value is not nullish *(`null` or `undefined`)*, with an optional fallback.
+ * @memberof Utils
  * @since 0.1.0
  *
- * @param {T} value The value to guarantee
+ * @param {unknown} value The value to guarantee
+ * @param {unknown} [fallback] An optional fallback value
  *
- * @returns {T} `value` if not `null` or `undefined`, otherwise will `throw`
+ * @returns {unknown} `value` or `fallback` if either are not nullish, otherwise will `throw`
  */
-function guarantee<T>(value: T): NonNullable<T>;
-
-/**
- * Guarantee that value is not `null` or `undefined`, with an optional fallback.
- * @since 0.1.0
- *
- * @param {T} value The value to guarantee
- * @param {U} fallback A fallback value if `value` is `null` or `undefined`
- *
- * @returns {T|U} `value` or `fallback` if either are not `null` or `undefined`, otherwise will `throw`
- */
-function guarantee<T, U>(value: T, fallback: U): NonNullable<T | U>;
-
-/**
- * Guarantee that value is not `null` or `undefined`, with an optional fallback.
- * @since 0.1.0
- *
- * @param {T} value The value to guarantee
- * @param {U} [fallback] A fallback value if `value` is `null` or `undefined`
- *
- * @returns {T|U} `value` or `fallback` if either are not `null` or `undefined`, otherwise will `throw`
- */
-function guarantee(value: unknown, fallback?: unknown): NonNullable<unknown> {
+function guarantee<T, U = never>(value: T, fallback?: U): NonNullable<unknown> {
     // If value is nullish, try using fallback instead.
     const result = value ?? fallback;
 

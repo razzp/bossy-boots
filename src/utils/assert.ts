@@ -1,11 +1,14 @@
 import { AssertionError } from '../internal/AssertionError';
 
 /**
- * Assert that condition is true.
+ * Assert that a condition is true.
+ * @memberof Utils
  * @since 0.1.0
  *
- * @param {unknown} condition The condition to check
- * @param {string} [message] The message to throw if the check fails
+ * @param {unknown} condition The condition to assert
+ * @param {string} [message] An optional message to include if the assertion fails
+ *
+ * @returns {void}
  */
 function assert(condition: unknown, message?: string): asserts condition {
     if (!condition) {

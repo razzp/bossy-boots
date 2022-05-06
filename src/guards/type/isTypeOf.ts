@@ -2,13 +2,21 @@ import type { Primitive } from '../../aliases/Primitive';
 import type { TypeOf } from '../../aliases/TypeOf';
 
 /**
- * Check that value's type matches one or more types.
+ * Check that a value's type matches one or more types.
+ * @memberof Guards.Type
  * @since 0.1.0
  *
- * @param {unknown} value The value to assert
- * @param {Array.<boolean|bigint|null|number|string|symbol|undefined>} types The types(s) to check
+ * @example
+ * function foo(input: string | number | symbol | boolean) {
+ *     if (isTypeOf(input, "number", "boolean")) {
+ *         input; // number | boolean
+ *     }
+ * }
  *
- * @returns {boolean} `true` if the check passes, `false` otherwise
+ * @param {unknown} value The value to assert
+ * @param {Array.<Primitive>} types The types(s) to check
+ *
+ * @returns {boolean}
  */
 function isTypeOf<TTypes extends Primitive[]>(
     value: unknown,
