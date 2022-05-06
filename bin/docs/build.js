@@ -114,8 +114,8 @@ async function run() {
         ],
     };
 
-    // Write the model to disk so it can be inspected.
-    //await writeFile('./test.json', JSON.stringify(model));
+    // TESTING: Write the model to disk so it can be inspected.
+    //await writeFile('./docs.temp.json', JSON.stringify(model));
 
     // Render the docs.
     const output = render(model);
