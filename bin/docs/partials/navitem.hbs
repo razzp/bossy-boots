@@ -1,0 +1,42 @@
+<li>
+  <a href="#{{#if id}}{{id}}{{else}}{{name}}{{/if}}">
+    {{#if displayName}}
+      {{{displayName}}}
+    {{else}}
+      {{#if isMethod}}
+        <code>{{name}}()</code>
+      {{else}}
+        {{name}}
+      {{/if}}
+    {{/if}}
+  </a>
+  {{#if methods}}
+  <ul>
+    {{#each methods}}
+      {{> navitem isMethod=true}}
+    {{/each}}
+  </ul>
+  {{/if}}
+  {{#if members}}
+  <ul>
+  {{#each members}}
+    {{> navitem}}
+  {{/each}}
+  </ul>
+  {{/if}}
+  {{#if abstractions}}
+  <ul>
+  {{#each abstractions}}
+    {{> navitem}}
+  {{/each}}
+  </ul>
+  {{/if}}
+  {{#if groups}}
+  <ul>
+  {{#each groups}}
+    {{! Explicitly set `methods` to null so they aren't written out }}
+    {{> navitem methods=null}}
+  {{/each}}
+  </ul>
+  {{/if}}
+</li>

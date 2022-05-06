@@ -1,0 +1,43 @@
+<h2 id="{{#if id}}{{id}}{{else}}{{name}}{{/if}}">{{#if parentName}}{{parentName}} &raquo; {{/if}}{{name}}</h2>
+
+{{#if (valueEquals name "Assertions")}}
+💡 Assertions will `throw` if the check fails. If not handled this will stop execution.
+
+{{/if}}
+{{#if (valueEquals name "Guards")}}
+💡 Guards return a `boolean` that is `true` if the check succeeds, and `false` otherwise.
+
+{{/if}}
+{{#if methods}}
+{{#each methods}}
+{{> method}}
+
+{{/each}}
+{{/if}}
+{{#if members}}
+{{#each members}}
+{{> member parentName=../name}}
+{{/each}}
+{{/if}}
+{{#if abstractions}}
+While the overarching `...InstanceOf()` and `...TypeOf()` methods are powerful
+and flexible, they too may become gratuitous for repetitive checks. To this end
+Bossy Boots also includes a collection of methods which abstract the logic away
+for common checks so that all you need to provide is a value.
+
+**Example:**
+
+```javascript
+// Both methods are identical.
+
+assertIsType(value, 'boolean');
+assertIsBoolean(value);
+```
+
+**Available methods:**
+
+{{#each abstractions}}
+{{> abstraction}}
+
+{{/each}}
+{{/if}}

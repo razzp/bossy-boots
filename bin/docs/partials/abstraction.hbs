@@ -1,0 +1,28 @@
+<h3 id="{{id}}">{{name}}</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">{{name}}</th>
+      <th colspan="2">Assertion</th>
+      <th colspan="2">Guard</th>
+    </tr>
+    <tr>
+      <th><em>is</em></th>
+      <th><em>is not</em></th>
+      <th><em>is</em></th>
+      <th><em>is not</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each groups}}
+    <tr id="{{name}}">
+      <td>{{{displayName}}}</td>
+      <td><code>{{methods.[0]}}()</code></td>
+      <td><code>{{methods.[1]}}()</code></td>
+      <td><code>{{methods.[2]}}()</code></td>
+      <td><code>{{methods.[3]}}()</code></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

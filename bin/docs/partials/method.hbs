@@ -1,0 +1,21 @@
+<h3 id="{{name}}"><code>{{name}}({{paramsToString params}})</code></h3>
+
+{{{description}}}
+
+| Param | Type | Description |
+| --- | --- | --- |
+{{#each params}}
+| {{{formatParamName this}}} | {{{formatParamType type}}} | {{{description}}} |
+{{/each}}
+{{#if examples}}
+
+**Examples:**
+
+{{#each examples}}
+```javascript
+{{{this}}}
+```
+{{/each}}
+{{/if}}
+
+<hr />
