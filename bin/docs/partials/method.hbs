@@ -7,12 +7,16 @@
 {{#each params}}
 | {{{formatParamName this}}} | {{{formatParamType type}}} | {{{description}}} |
 {{/each}}
+{{#if returns.[0].description}}
+
+**Returns:** {{{returns.[0].description}}}
+{{/if}}
 {{#if examples}}
 
-**Examples:**
+**Example:**
 
 {{#each examples}}
-```javascript
+```typescript
 {{{this}}}
 ```
 {{/each}}

@@ -22,16 +22,17 @@
 {{#if abstractions}}
 While the overarching `...InstanceOf()` and `...TypeOf()` methods are powerful
 and flexible, they too may become gratuitous for repetitive checks. To this end
-Bossy Boots also includes a collection of methods which abstract the logic away
-for common checks so that all you need to provide is a value.
+Bossy Boots also includes a collection of methods which abstract common checks.
+These methods only require a value.
 
 **Example:**
 
 ```javascript
-// Both methods are identical.
+assertIsBoolean(value);
+
+// Is the equivalent of:
 
 assertIsType(value, 'boolean');
-assertIsBoolean(value);
 ```
 
 **Available methods:**

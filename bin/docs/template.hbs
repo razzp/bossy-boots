@@ -1,12 +1,11 @@
 # Bossy Boots
 
-Bossy Boots is a helpful collection of type guards and assertions.
+Bossy Boots is a helpful collection of type guards and assertions, written in TypeScript.
 
 ## Contents
 
 <ul>
   <li><a href="#overview">Overview</a></li>
-  <li><a href="#examples">Examples</a></li>
   <li><a href="#installation">Installation</a></li>
   <li><a href="#usage">Usage</a></li>
   {{> navitem name="API" members=api}}
@@ -17,44 +16,6 @@ Bossy Boots is a helpful collection of type guards and assertions.
 The benefits of using Bossy Boots include a more robust runtime and less repetitious logic in your code. With type definitions included out the box, TypeScript environments (especially those in strict mode) will benefit even further with accurate type inference and narrowing.
 
 The bulk of Bossy Boots is made up of **assertions** and **guards** that take a value and check if it matches one or more predicates. The most important distinction between the two is that **assertions** will `throw` if the check fails, whereas **guards** will return a `boolean` instead, allowing you implement your own handling logic. Most **assertions** have (and use) **guard** counterparts.
-
-## Examples
-
-```javascript
-// Using a guard:
-
-import { isNotNull } from 'bossy-boots';
-
-document.addEventListener('click', (event) => {
-  // target has a union type of `EventTarget | null`
-  const target = event.target;
-
-  // target is possibly `null`. This could throw at runtime and will fail type-checking.
-  target.method();
-
-  if (isNotNull(target)) {
-    // target is not `null`, which narrows the type to `EventTarget`. We're good to go.
-    target.method();
-  }
-});
-```
-
-```javascript
-// Using an assertion:
-
-import { assertIsNotNull } from 'bossy-boots';
-
-document.addEventListener('click', (event) => {
-  // target has a union type of `EventTarget | null`
-  const target = event.target;
-
-  // If the check fails it will throw.
-  assertIsNotNull(target);
-
-  // We're still executing, so we can be assured that target is `EventTarget`.
-  target.method();
-});
-```
 
 ## Installation
 
