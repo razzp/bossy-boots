@@ -1,4 +1,4 @@
-import { assert } from '../../src/assertions/assert';
+import { assert } from '../../src/utils/assert';
 import { AssertionError } from '../../src/internal/AssertionError';
 
 test('Given a true condition, does not throw', () => {
