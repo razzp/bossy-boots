@@ -13,7 +13,7 @@ import type { Primitive } from '../../aliases/Primitive';
  * @example
  * function foo(input: string | number | symbol | boolean) {
  *     try {
- *         assertIsTypeOf(input, "number", "boolean");
+ *         assertIsTypeOf(input, 'number', 'boolean');
  *         input; // number | boolean
  *     } catch (error) {}
  * }

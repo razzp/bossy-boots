@@ -10,7 +10,7 @@ import type { Primitive } from '../../aliases/Primitive';
  *
  * @example
  * function foo(input: string | number | symbol | boolean) {
- *     if (isNotTypeOf(input, "number", "boolean")) {
+ *     if (isNotTypeOf(input, 'number', 'boolean')) {
  *         input; // string | symbol
  *     }
  * }

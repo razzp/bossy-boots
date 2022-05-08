@@ -8,7 +8,7 @@ import type { TypeOf } from '../../aliases/TypeOf';
  *
  * @example
  * function foo(input: string | number | symbol | boolean) {
- *     if (isTypeOf(input, "number", "boolean")) {
+ *     if (isTypeOf(input, 'number', 'boolean')) {
  *         input; // number | boolean
  *     }
  * }
