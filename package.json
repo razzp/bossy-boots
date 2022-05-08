@@ -33,7 +33,8 @@
     "prettier": "prettier --list-different --write *.js src/** tests/** bin/**/*.js",
     "types": "rimraf types && tsc --project tsconfig.types.json",
     "test": "jest --verbose --coverage",
-    "docs": "node bin/docs/build.js"
+    "docs": "node bin/docs/build.js",
+    "prepublishOnly": "npm run test"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.1.3",
