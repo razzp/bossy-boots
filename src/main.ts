@@ -1,7 +1,3 @@
-// Assertions
-
-export { assert } from './assertions/assert';
-
 // Assertions > Instance
 
 export { assertIsInstanceOf } from './assertions/instance/assertIsInstanceOf';
@@ -78,4 +74,5 @@ export { isNotUndefined } from './guards/type/isNotUndefined';
 
 // Utils
 
+export { assert } from './utils/assert';
 export { guarantee } from './utils/guarantee';

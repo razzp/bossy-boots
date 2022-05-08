@@ -3,12 +3,13 @@ import { isString } from './isString';
 import type { NotTypeOf } from '../../aliases/NotTypeOf';
 
 /**
- * Check that value *does not* have a type of `string`.
+ * Check that a value *does not* have a type of `string`.
+ * @memberof Guards.Type
  * @since 0.1.0
  *
  * @param {unknown} value The value to assert
  *
- * @returns {boolean} `true` if the check passes, `false` otherwise
+ * @returns {boolean}
  */
 function isNotString<TValue>(
     value: TValue

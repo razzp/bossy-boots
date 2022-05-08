@@ -2,10 +2,13 @@ import { isNotBigInt } from '../../guards/type/isNotBigInt';
 import { AssertionError } from '../../internal/AssertionError';
 
 /**
- * Assert that value has a type of `bigint`.
+ * Assert that a value has a type of `bigint`.
+ * @memberof Assertions.Type
  * @since 0.1.0
  *
  * @param {unknown} value The value to assert
+ *
+ * @returns {void}
  */
 function assertIsBigInt(value: unknown): asserts value is bigint {
     if (isNotBigInt(value)) {
