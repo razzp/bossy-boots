@@ -5,6 +5,13 @@ import { assertIsNotNullish } from '../assertions/type/assertIsNotNullish';
  * @memberof Utils
  * @since 0.1.0
  *
+ * @example
+ * // Value will be `null | Element`
+ * const foo = document.querySelectorAll('.foo');
+ *
+ * // Value will be `Element`.
+ * const bar = guarantee(document.querySelectorAll('.bar'));
+ *
  * @param {unknown} value The value to guarantee
  * @param {unknown} [fallback] An optional fallback value
  *

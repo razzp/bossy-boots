@@ -5,6 +5,12 @@ import { AssertionError } from '../internal/AssertionError';
  * @memberof Utils
  * @since 0.1.0
  *
+ * @example
+ * function foo(input: number) {
+ *     assert(input === 1);
+ *     input; // 1
+ * }
+ *
  * @param {unknown} condition The condition to assert
  * @param {string} [message] An optional message to include if the assertion fails
  *
