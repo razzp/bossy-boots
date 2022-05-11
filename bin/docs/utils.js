@@ -91,24 +91,8 @@ function paramsToString(params) {
     return params.map(formatParamName).join(', ');
 }
 
-function typeAbstractionTransformer(name) {
-    const nullishSupplement = '(<code>null</code> or <code>undefined</code>)';
-    const nameFormatted = wrapCode(name.toLowerCase());
-
-    switch (name) {
-        case 'Nullish':
-            return `${nameFormatted} <em>${nullishSupplement}</em>`;
-        default:
-            return nameFormatted;
-    }
-}
-
 function valueEquals(value, input) {
     return value === input;
-}
-
-function wrapCode(input) {
-    return `<code>${input}</code>`;
 }
 
 export {
@@ -120,7 +104,5 @@ export {
     getTypeNodes,
     loadPartials,
     paramsToString,
-    typeAbstractionTransformer,
     valueEquals,
-    wrapCode,
 };

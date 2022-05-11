@@ -13,9 +13,7 @@ import {
     getTypeNodes,
     loadPartials,
     paramsToString,
-    typeAbstractionTransformer,
     valueEquals,
-    wrapCode,
 } from './utils.js';
 
 async function run() {
@@ -89,8 +87,7 @@ async function run() {
                                 docData,
                                 ['Assertions.Instance', 'Guards.Instance'],
                                 /(?:assertIs|is)(?!(?:Not)?InstanceOf)(Not)?(\w+)/
-                            ),
-                            wrapCode
+                            )
                         ),
                     },
                     {
@@ -102,7 +99,7 @@ async function run() {
                                 ['Assertions.Type', 'Guards.Type'],
                                 /(?:assertIs|is)(?!(?:Not)?TypeOf)(Not)?(\w+)/
                             ),
-                            typeAbstractionTransformer
+                            (name) => name.toLowerCase()
                         ),
                     },
                 ],

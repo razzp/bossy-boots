@@ -119,7 +119,7 @@ Bossy Boots is a helpful collection of type guards and assertions, written in Ty
                 </a>
               </li>    <li>
                 <a href="#Nullish">
-                    <code>nullish</code> <em>(<code>null</code> or <code>undefined</code>)</em>
+                    <code>nullish</code>
                 </a>
               </li>    <li>
                 <a href="#Number">
@@ -422,7 +422,7 @@ assertIsType(value, 'boolean');
       <td><code>isNotUndefined()</code></td>
     </tr>
     <tr id="Nullish">
-      <td><code>nullish</code> <em>(<code>null</code> or <code>undefined</code>)</em></td>
+      <td><code>nullish</code> *</td>
       <td><code>assertIsNullish()</code></td>
       <td><code>assertIsNotNullish()</code></td>
       <td><code>isNullish()</code></td>
@@ -451,6 +451,8 @@ assertIsType(value, 'boolean');
     </tr>
   </tbody>
 </table>
+
+\* `nullish` is equivalent to `null` or `undefined`.
 
 <h2 id="Utils">Utils</h2>
 
