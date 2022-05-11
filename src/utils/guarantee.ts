@@ -17,7 +17,7 @@ import { assertIsNotNullish } from '../assertions/type/assertIsNotNullish';
  *
  * @returns {unknown} `value` or `fallback` if either are not nullish, otherwise will `throw`
  */
-function guarantee<T, U = never>(value: T, fallback?: U): NonNullable<unknown> {
+function guarantee<T, U = never>(value: T, fallback?: U): NonNullable<T | U> {
     // If value is nullish, try using fallback instead.
     const result = value ?? fallback;
 
