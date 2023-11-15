@@ -95,6 +95,10 @@ Bossy Boots is a helpful collection of type guards and assertions, written in Ty
                 <a href="#Element">
                     <code>Element</code>
                 </a>
+              </li>    <li>
+                <a href="#HTMLElement">
+                    <code>HTMLElement</code>
+                </a>
               </li>  </ul>
           </li>    <li>
             <a href="#Abstractions.Type">
@@ -371,6 +375,13 @@ assertIsType(value, 'boolean');
       <td><code>assertIsNotElement()</code></td>
       <td><code>isElement()</code></td>
       <td><code>isNotElement()</code></td>
+    </tr>
+    <tr id="HTMLElement">
+      <td><code>HTMLElement</code></td>
+      <td><code>assertIsHTMLElement()</code></td>
+      <td><code>assertIsNotHTMLElement()</code></td>
+      <td><code>isHTMLElement()</code></td>
+      <td><code>isNotHTMLElement()</code></td>
     </tr>
   </tbody>
 </table>

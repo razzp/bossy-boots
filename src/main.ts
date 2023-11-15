@@ -6,6 +6,9 @@ export { assertIsNotInstanceOf } from './assertions/instance/assertIsNotInstance
 export { assertIsElement } from './assertions/instance/assertIsElement';
 export { assertIsNotElement } from './assertions/instance/assertIsNotElement';
 
+export { assertIsHTMLElement } from './assertions/instance/assertIsHTMLElement';
+export { assertIsNotHTMLElement } from './assertions/instance/assertIsNotHTMLElement';
+
 // Assertions > Type
 
 export { assertIsTypeOf } from './assertions/type/assertIsTypeOf';
@@ -42,6 +45,9 @@ export { isNotInstanceOf } from './guards/instance/isNotInstanceOf';
 
 export { isElement } from './guards/instance/isElement';
 export { isNotElement } from './guards/instance/isNotElement';
+
+export { isHTMLElement } from './guards/instance/isHTMLElement';
+export { isNotHTMLElement } from './guards/instance/isNotHTMLElement';
 
 // Guards > Type
 
