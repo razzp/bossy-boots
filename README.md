@@ -336,7 +336,7 @@ function foo(input: string | number | symbol | boolean) {    if (isNotTypeOf(in
 
 <h2 id="Abstractions">Common use-case wrappers</h2>
 
-While the overarching `...InstanceOf()` and `...TypeOf()` methods are powerful
+While the overarching `InstanceOf()` and `TypeOf()` methods are powerful
 and flexible, they too may become gratuitous for repetitive checks. To this end,
 Bossy Boots also includes a collection of methods which abstract away common checks.
 
@@ -462,7 +462,7 @@ assertIsType(value, 'boolean');
   </tbody>
 </table>
 
-\* `nullish` is equivalent to `null` or `undefined`.
+\* `nullish` is equivalent to `null` OR `undefined`.
 
 <h2 id="Utils">Utils</h2>
 
