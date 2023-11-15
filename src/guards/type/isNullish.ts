@@ -4,7 +4,7 @@ import { isUndefined } from './isUndefined';
 /**
  * Check that a value has a type of `null` or `undefined`.
  * @memberof Guards.Type
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param {unknown} value The value to assert
  *

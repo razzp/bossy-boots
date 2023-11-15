@@ -95,6 +95,10 @@ Bossy Boots is a helpful collection of type guards and assertions, written in Ty
                 <a href="#Element">
                     <code>Element</code>
                 </a>
+              </li>    <li>
+                <a href="#HTMLElement">
+                    <code>HTMLElement</code>
+                </a>
               </li>  </ul>
           </li>    <li>
             <a href="#Abstractions.Type">
@@ -332,7 +336,7 @@ function foo(input: string | number | symbol | boolean) {    if (isNotTypeOf(in
 
 <h2 id="Abstractions">Common use-case wrappers</h2>
 
-While the overarching `...InstanceOf()` and `...TypeOf()` methods are powerful
+While the overarching `InstanceOf()` and `TypeOf()` methods are powerful
 and flexible, they too may become gratuitous for repetitive checks. To this end,
 Bossy Boots also includes a collection of methods which abstract away common checks.
 
@@ -371,6 +375,13 @@ assertIsType(value, 'boolean');
       <td><code>assertIsNotElement()</code></td>
       <td><code>isElement()</code></td>
       <td><code>isNotElement()</code></td>
+    </tr>
+    <tr id="HTMLElement">
+      <td><code>HTMLElement</code></td>
+      <td><code>assertIsHTMLElement()</code></td>
+      <td><code>assertIsNotHTMLElement()</code></td>
+      <td><code>isHTMLElement()</code></td>
+      <td><code>isNotHTMLElement()</code></td>
     </tr>
   </tbody>
 </table>
@@ -451,7 +462,7 @@ assertIsType(value, 'boolean');
   </tbody>
 </table>
 
-\* `nullish` is equivalent to `null` or `undefined`.
+\* `nullish` is equivalent to `null` OR `undefined`.
 
 <h2 id="Utils">Utils</h2>
 

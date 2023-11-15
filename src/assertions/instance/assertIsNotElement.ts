@@ -6,7 +6,7 @@ import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
 /**
  * Assert that a value is *not* an instance of `Element`.
  * @memberof Assertions.Instance
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param {unknown} value The value to assert
  *

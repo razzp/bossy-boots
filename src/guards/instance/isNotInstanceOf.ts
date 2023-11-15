@@ -5,7 +5,7 @@ import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
 /**
  * Check that a value is *not* an instance of one or more prototypes.
  * @memberof Guards.Instance
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @example
  * function foo(input: Red | Yellow | Green | Blue) {

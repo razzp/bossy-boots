@@ -3,7 +3,7 @@ import { AssertionError } from '../internal/AssertionError';
 /**
  * Assert that a condition is true.
  * @memberof Utils
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @example
  * function foo(input: number) {
