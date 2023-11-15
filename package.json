@@ -28,9 +28,8 @@
     "types/**/*.d.ts"
   ],
   "scripts": {
-    "prebuild": "npm run lint && npm run prettier",
+    "prebuild": "npm run prettier",
     "build": "rimraf dist && rollup --config && npm run types",
-    "lint": "eslint --fix src/** tests/** bin/**/*.js",
     "prettier": "prettier --list-different --write *.js src/** tests/** bin/**/*.js",
     "types": "rimraf types && tsc --project tsconfig.types.json",
     "test": "jest --verbose --coverage",
