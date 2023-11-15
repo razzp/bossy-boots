@@ -3,7 +3,7 @@ import { assertIsNotNullish } from '../assertions/type/assertIsNotNullish';
 /**
  * Guarantee that a value is not nullish *(`null` or `undefined`)*, with an optional fallback.
  * @memberof Utils
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @example
  * // Value will be `null | Element`

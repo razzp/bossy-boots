@@ -4,7 +4,7 @@ import type { TypeOf } from '../../aliases/TypeOf';
 /**
  * Check that a value's type matches one or more types.
  * @memberof Guards.Type
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @example
  * function foo(input: string | number | symbol | boolean) {

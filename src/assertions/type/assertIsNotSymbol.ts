@@ -6,7 +6,7 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
 /**
  * Assert that a value *does not* have a type of `symbol`.
  * @memberof Assertions.Type
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param {unknown} value The value to assert
  *
