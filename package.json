@@ -4,12 +4,20 @@
   "version": "1.0.1",
   "description": "A helpful collection of type guards and assertions, written in TypeScript.",
   "keywords": [
+    "assert",
     "assertion",
     "guard",
+    "guards",
+    "guarding",
     "type",
     "typescript",
+    "javascript",
     "utilities",
-    "helpers"
+    "utility",
+    "helpers",
+    "helper",
+    "library",
+    "strict"
   ],
   "license": "MIT",
   "bugs": "https://github.com/razzp/bossy-boots/issues",
