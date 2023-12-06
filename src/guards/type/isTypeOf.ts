@@ -18,10 +18,10 @@ import type { TypeOf } from '../../aliases/TypeOf';
  *
  * @returns {boolean}
  */
-function isTypeOf<TTypes extends Primitive[]>(
+function isTypeOf<T extends Primitive[]>(
     value: unknown,
-    ...types: TTypes
-): value is TypeOf<TTypes> {
+    ...types: T
+): value is TypeOf<T> {
     return types.some((type) => typeof value === type);
 }
 

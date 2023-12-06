@@ -1,6 +1,6 @@
 import { isInstanceOf } from './isInstanceOf';
 
-import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
+import type { InstanceOf } from '../../aliases/InstanceOf';
 
 /**
  * Check that a value is *not* an instance of one or more prototypes.
@@ -19,10 +19,10 @@ import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
  *
  * @returns {boolean}
  */
-function isNotInstanceOf<TValue, TPrototypes extends Function[]>(
-    value: TValue,
-    ...prototypes: TPrototypes
-): value is NotInstanceOf<TValue, TPrototypes> {
+function isNotInstanceOf<T, U extends Function[]>(
+    value: T,
+    ...prototypes: U
+): value is Exclude<T, InstanceOf<U>> {
     return !isInstanceOf(value, ...prototypes);
 }
 

@@ -1,8 +1,6 @@
 import { isSymbol } from '../../guards/type/isSymbol';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Assert that a value *does not* have a type of `symbol`.
  * @memberof Assertions.Type
@@ -12,9 +10,7 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
  *
  * @returns {void}
  */
-function assertIsNotSymbol<TValue>(
-    value: TValue
-): asserts value is NotTypeOf<TValue, 'symbol'> {
+function assertIsNotSymbol<T>(value: T): asserts value is Exclude<T, symbol> {
     if (isSymbol(value)) {
         throw new AssertionError('Value should not be symbol');
     }

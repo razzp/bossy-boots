@@ -1,8 +1,6 @@
 import { isUndefined } from '../../guards/type/isUndefined';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Assert that a value *does not* have a type of `undefined`.
  * @memberof Assertions.Type
@@ -12,9 +10,9 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
  *
  * @returns {void}
  */
-function assertIsNotUndefined<TValue>(
-    value: TValue
-): asserts value is NotTypeOf<TValue, 'undefined'> {
+function assertIsNotUndefined<T>(
+    value: T
+): asserts value is Exclude<T, undefined> {
     if (isUndefined(value)) {
         throw new AssertionError('Value should not be undefined');
     }

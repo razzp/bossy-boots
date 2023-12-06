@@ -1,7 +1,7 @@
 import { isInstanceOf } from '../../guards/instance/isInstanceOf';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
+import type { InstanceOf } from '../../aliases/InstanceOf';
 
 /**
  * Assert that a value is *not* an instance of one or more prototypes.
@@ -21,10 +21,10 @@ import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
  *
  * @returns {void}
  */
-function assertIsNotInstanceOf<TValue, TPrototypes extends Function[]>(
-    value: TValue,
-    ...prototypes: TPrototypes
-): asserts value is NotInstanceOf<TValue, TPrototypes> {
+function assertIsNotInstanceOf<T, U extends Function[]>(
+    value: T,
+    ...prototypes: U
+): asserts value is Exclude<T, InstanceOf<U>> {
     if (isInstanceOf(value, ...prototypes)) {
         throw new AssertionError(`Value should not be ${value.name}`);
     }

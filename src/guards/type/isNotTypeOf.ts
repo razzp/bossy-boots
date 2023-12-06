@@ -1,7 +1,7 @@
 import { isTypeOf } from './isTypeOf';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
 import type { Primitive } from '../../aliases/Primitive';
+import type { TypeOf } from '../../aliases/TypeOf';
 
 /**
  * Check that a value's type *does not* match one or more types.
@@ -20,10 +20,10 @@ import type { Primitive } from '../../aliases/Primitive';
  *
  * @returns {boolean}
  */
-function isNotTypeOf<TValue, TTypes extends Primitive[]>(
-    value: TValue,
-    ...types: TTypes
-): value is NotTypeOf<TValue, TTypes> {
+function isNotTypeOf<T, U extends Primitive[]>(
+    value: T,
+    ...types: U
+): value is Exclude<T, TypeOf<U>> {
     return !isTypeOf(value, ...types);
 }
 

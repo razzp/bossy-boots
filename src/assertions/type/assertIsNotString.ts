@@ -1,8 +1,6 @@
 import { isString } from '../../guards/type/isString';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Assert that a value *does not* have a type of `string`.
  * @memberof Assertions.Type
@@ -12,9 +10,7 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
  *
  * @returns {void}
  */
-function assertIsNotString<TValue>(
-    value: TValue
-): asserts value is NotTypeOf<TValue, 'string'> {
+function assertIsNotString<T>(value: T): asserts value is Exclude<T, string> {
     if (isString(value)) {
         throw new AssertionError('Value should not be string');
     }

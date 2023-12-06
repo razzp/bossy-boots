@@ -1,7 +1,5 @@
 import { isNullish } from './isNullish';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Check that a value *does not* have a type of `null` or `undefined`.
  * @memberof Guards.Type
@@ -11,9 +9,7 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
  *
  * @returns {boolean}
  */
-function isNotNullish<TValue>(
-    value: TValue
-): value is NotTypeOf<TValue, 'null' | 'undefined'> {
+function isNotNullish<T>(value: T): value is NonNullable<T> {
     return !isNullish(value);
 }
 

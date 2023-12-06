@@ -1,8 +1,6 @@
 import { isNull } from '../../guards/type/isNull';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Assert that a value *does not* have a type of `null`.
  * @memberof Assertions.Type
@@ -12,9 +10,7 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
  *
  * @returns {void}
  */
-function assertIsNotNull<TValue>(
-    value: TValue
-): asserts value is NotTypeOf<TValue, 'null'> {
+function assertIsNotNull<T>(value: T): asserts value is Exclude<T, null> {
     if (isNull(value)) {
         throw new AssertionError('Value should not be null');
     }

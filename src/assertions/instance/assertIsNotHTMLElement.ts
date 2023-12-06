@@ -1,8 +1,6 @@
 import { isHTMLElement } from '../../guards/instance/isHTMLElement';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
-
 /**
  * Assert that a value is *not* an instance of `HTMLElement`.
  * @memberof Assertions.Instance
@@ -12,9 +10,9 @@ import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
  *
  * @returns {void}
  */
-function assertIsNotHTMLElement<TValue>(
-    value: TValue
-): asserts value is NotInstanceOf<TValue, typeof HTMLElement> {
+function assertIsNotHTMLElement<T>(
+    value: T
+): asserts value is Exclude<T, InstanceType<typeof HTMLElement>> {
     if (isHTMLElement(value)) {
         throw new AssertionError('Value should not be HTMLElement');
     }

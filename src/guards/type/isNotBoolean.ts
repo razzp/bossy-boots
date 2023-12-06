@@ -1,7 +1,5 @@
 import { isBoolean } from './isBoolean';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Check that a value *does not* have a type of `boolean`.
  * @memberof Guards.Type
@@ -11,9 +9,7 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
  *
  * @returns {boolean}
  */
-function isNotBoolean<TValue>(
-    value: TValue
-): value is NotTypeOf<TValue, 'boolean'> {
+function isNotBoolean<T>(value: T): value is Exclude<T, boolean> {
     return !isBoolean(value);
 }
 

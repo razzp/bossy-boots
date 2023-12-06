@@ -23,10 +23,10 @@ import type { Primitive } from '../../aliases/Primitive';
  *
  * @returns {void}
  */
-function assertIsTypeOf<TTypes extends Primitive[]>(
+function assertIsTypeOf<T extends Primitive[]>(
     value: unknown,
-    ...types: TTypes
-): asserts value is TypeOf<TTypes> {
+    ...types: T
+): asserts value is TypeOf<T> {
     if (isNotTypeOf(value, ...types)) {
         throw new AssertionError(`Value should be ${toReadableList(types)}`);
     }

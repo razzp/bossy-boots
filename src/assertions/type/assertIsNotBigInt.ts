@@ -1,8 +1,6 @@
 import { isBigInt } from '../../guards/type/isBigInt';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Assert that a value *does not* have a type of `bigint`.
  * @memberof Assertions.Type
@@ -12,9 +10,7 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
  *
  * @returns {void}
  */
-function assertIsNotBigInt<TValue>(
-    value: TValue
-): asserts value is NotTypeOf<TValue, 'bigint'> {
+function assertIsNotBigInt<T>(value: T): asserts value is Exclude<T, bigint> {
     if (isBigInt(value)) {
         throw new AssertionError('Value should not be bigint');
     }

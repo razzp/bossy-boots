@@ -1,5 +1,13 @@
-import type { PrimitivesMap } from '../interfaces/PrimitivesMap';
+type PrimitiveMap = {
+    boolean: boolean;
+    bigint: bigint;
+    null: null;
+    number: number;
+    string: string;
+    symbol: symbol;
+    undefined: undefined;
+};
 
-type Primitive = keyof PrimitivesMap;
+type Primitive = keyof PrimitiveMap;
 
-export { Primitive };
+export { Primitive, PrimitiveMap };

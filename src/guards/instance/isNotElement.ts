@@ -1,7 +1,5 @@
 import { isElement } from './isElement';
 
-import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
-
 /**
  * Check that a value is *not* an instance of `Element`.
  * @memberof Guards.Instance
@@ -11,9 +9,9 @@ import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
  *
  * @returns {boolean}
  */
-function isNotElement<TValue>(
-    value: TValue
-): value is NotInstanceOf<TValue, typeof Element> {
+function isNotElement<T>(
+    value: T
+): value is Exclude<T, InstanceType<typeof Element>> {
     return !isElement(value);
 }
 

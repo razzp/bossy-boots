@@ -1,8 +1,8 @@
 import { isTypeOf } from '../../guards/type/isTypeOf';
 import { AssertionError } from '../../internal/AssertionError';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
 import type { Primitive } from '../../aliases/Primitive';
+import type { TypeOf } from '../../aliases/TypeOf';
 
 /**
  * Assert that a value's type *does not* match one or more types.
@@ -22,10 +22,10 @@ import type { Primitive } from '../../aliases/Primitive';
  *
  * @returns {void}
  */
-function assertIsNotTypeOf<TValue, TTypes extends Primitive[]>(
-    value: TValue,
-    ...types: TTypes
-): asserts value is NotTypeOf<TValue, TTypes> {
+function assertIsNotTypeOf<T, U extends Primitive[]>(
+    value: T,
+    ...types: U
+): asserts value is Exclude<T, TypeOf<U>> {
     if (isTypeOf(value, ...types)) {
         throw new AssertionError(`Value should not be ${typeof value}`);
     }

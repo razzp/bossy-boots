@@ -1,7 +1,5 @@
 import { isHTMLElement } from './isHTMLElement';
 
-import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
-
 /**
  * Check that a value is *not* an instance of `HTMLElement`.
  * @memberof Guards.Instance
@@ -11,9 +9,9 @@ import type { NotInstanceOf } from '../../aliases/NotInstanceOf';
  *
  * @returns {boolean}
  */
-function isNotHTMLElement<TValue>(
-    value: TValue
-): value is NotInstanceOf<TValue, typeof HTMLElement> {
+function isNotHTMLElement<T>(
+    value: T
+): value is Exclude<T, InstanceType<typeof HTMLElement>> {
     return !isHTMLElement(value);
 }
 

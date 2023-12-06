@@ -22,10 +22,10 @@ import type { InstanceOf } from '../../aliases/InstanceOf';
  *
  * @returns {void}
  */
-function assertIsInstanceOf<TPrototypes extends Function[]>(
+function assertIsInstanceOf<T extends Function[]>(
     value: unknown,
-    ...prototypes: TPrototypes
-): asserts value is InstanceOf<TPrototypes> {
+    ...prototypes: T
+): asserts value is InstanceOf<T> {
     if (isNotInstanceOf(value, ...prototypes)) {
         throw new AssertionError(
             `Value should be ${toReadableList(

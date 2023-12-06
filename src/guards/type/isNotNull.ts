@@ -1,7 +1,5 @@
 import { isNull } from './isNull';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Check that a value *does not* have a type of `null`.
  * @memberof Guards.Type
@@ -11,7 +9,7 @@ import type { NotTypeOf } from '../../aliases/NotTypeOf';
  *
  * @returns {boolean}
  */
-function isNotNull<TValue>(value: TValue): value is NotTypeOf<TValue, 'null'> {
+function isNotNull<T>(value: T): value is Exclude<T, null> {
     return !isNull(value);
 }
 
