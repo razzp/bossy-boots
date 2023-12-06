@@ -3,7 +3,8 @@
         "strict": true,
         "target": "ES2015",
         "module": "ESNext",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "esModuleInterop": true
     },
     "exclude": [
         "node_modules",

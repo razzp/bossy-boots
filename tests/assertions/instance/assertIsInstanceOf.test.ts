@@ -1,16 +1,9 @@
-import { JSDOM } from 'jsdom';
+/**
+ * @jest-environment jsdom
+ */
 
 import { assertIsInstanceOf } from '../../../src/assertions/instance/assertIsInstanceOf';
 import { AssertionError } from '../../../src/internal/AssertionError';
-
-beforeAll(() => {
-    const { window } = new JSDOM();
-
-    // Ensure that required globals are set.
-    global.document = window.document;
-    global.Element = window.Element;
-    global.Date = window.Date;
-});
 
 test('Given instance(s) that match the input, does not throw', () => {
     const date = new Date();

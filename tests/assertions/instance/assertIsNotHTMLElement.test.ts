@@ -1,15 +1,9 @@
-import { JSDOM } from 'jsdom';
+/**
+ * @jest-environment jsdom
+ */
 
 import { assertIsNotHTMLElement } from '../../../src/assertions/instance/assertIsNotHTMLElement';
 import { AssertionError } from '../../../src/internal/AssertionError';
-
-beforeAll(() => {
-    const { window } = new JSDOM();
-
-    // Ensure that required globals are set.
-    global.document = window.document;
-    global.HTMLElement = window.HTMLElement;
-});
 
 test('Given an HTMLElement, throws', () => {
     expect(() =>

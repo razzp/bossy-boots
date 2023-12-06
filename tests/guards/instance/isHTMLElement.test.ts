@@ -1,14 +1,8 @@
-import { JSDOM } from 'jsdom';
+/**
+ * @jest-environment jsdom
+ */
 
 import { isHTMLElement } from '../../../src/guards/instance/isHTMLElement';
-
-beforeAll(() => {
-    const { window } = new JSDOM();
-
-    // Ensure that required globals are set.
-    global.document = window.document;
-    global.HTMLElement = window.HTMLElement;
-});
 
 test('Given an HTMLElement, returns true', () => {
     expect(isHTMLElement(document.createElement('div'))).toBe(true);
