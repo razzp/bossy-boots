@@ -2,10 +2,10 @@ import { assertIsNotBoolean } from '../../../src/assertions/type/assertIsNotBool
 import { AssertionError } from '../../../src/internal/AssertionError';
 
 test('Given a non-boolean input, does not throw', () => {
-    expect(() => assertIsNotBoolean('foo')).not.toThrowError();
+    expect(() => assertIsNotBoolean('foo')).not.toThrow();
 });
 
 test('Given a boolean input, throws', () => {
-    expect(() => assertIsNotBoolean(true)).toThrowError(AssertionError);
-    expect(() => assertIsNotBoolean(false)).toThrowError(AssertionError);
+    expect(() => assertIsNotBoolean(true)).toThrow(AssertionError);
+    expect(() => assertIsNotBoolean(false)).toThrow(AssertionError);
 });

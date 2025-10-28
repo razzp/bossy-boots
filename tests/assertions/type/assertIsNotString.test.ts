@@ -2,9 +2,9 @@ import { assertIsNotString } from '../../../src/assertions/type/assertIsNotStrin
 import { AssertionError } from '../../../src/internal/AssertionError';
 
 test('Given a non-string input, does not throw', () => {
-    expect(() => assertIsNotString(1)).not.toThrowError();
+    expect(() => assertIsNotString(1)).not.toThrow();
 });
 
 test('Given a string input, throws', () => {
-    expect(() => assertIsNotString('foo')).toThrowError(AssertionError);
+    expect(() => assertIsNotString('foo')).toThrow(AssertionError);
 });

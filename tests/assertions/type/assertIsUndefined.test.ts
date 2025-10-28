@@ -2,9 +2,9 @@ import { assertIsUndefined } from '../../../src/assertions/type/assertIsUndefine
 import { AssertionError } from '../../../src/internal/AssertionError';
 
 test('Given a non-undefined input, throws', () => {
-    expect(() => assertIsUndefined('foo')).toThrowError(AssertionError);
+    expect(() => assertIsUndefined('foo')).toThrow(AssertionError);
 });
 
 test('Given an undefined input, does not throw', () => {
-    expect(() => assertIsUndefined(undefined)).not.toThrowError();
+    expect(() => assertIsUndefined(undefined)).not.toThrow();
 });

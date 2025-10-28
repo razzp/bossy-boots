@@ -6,9 +6,9 @@ import { assertIsNotHTMLElement } from '../../../src/assertions/instance/assertI
 import { AssertionError } from '../../../src/internal/AssertionError';
 
 test('Given an HTMLElement, throws', () => {
-    expect(() =>
-        assertIsNotHTMLElement(document.createElement('div'))
-    ).toThrowError(AssertionError);
+    expect(() => assertIsNotHTMLElement(document.createElement('div'))).toThrow(
+        AssertionError
+    );
 });
 
 test('Given an input that is not an HTMLElement, does not throw', () => {
@@ -16,7 +16,7 @@ test('Given an input that is not an HTMLElement, does not throw', () => {
         assertIsNotHTMLElement(
             document.createElementNS('http://www.w3.org/2000/svg', 'svg')
         )
-    ).not.toThrowError();
+    ).not.toThrow();
 
-    expect(() => assertIsNotHTMLElement(null)).not.toThrowError();
+    expect(() => assertIsNotHTMLElement(null)).not.toThrow();
 });

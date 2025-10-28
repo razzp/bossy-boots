@@ -200,7 +200,12 @@ Assert that a value is an instance of one or more prototypes.
 **Example:**
 
 ```typescript
-function foo(input: Red | Yellow | Green | Blue) {    try {        assertIsInstanceOf(input, Yellow, Blue);        input; // Yellow | Blue    } catch (error) {}}
+function foo(input: Red | Yellow | Green | Blue) {
+    try {
+        assertIsInstanceOf(input, Yellow, Blue);
+        input; // Yellow | Blue
+    } catch (error) {}
+}
 ```
 
 <hr />
@@ -217,7 +222,12 @@ Assert that a value is *not* an instance of one or more prototypes.
 **Example:**
 
 ```typescript
-function foo(input: Red | Yellow | Green | Blue) {    try {        assertIsNotInstanceOf(input, Yellow, Blue);        input; // Red | Green    } catch (error) {}}
+function foo(input: Red | Yellow | Green | Blue) {
+    try {
+        assertIsNotInstanceOf(input, Yellow, Blue);
+        input; // Red | Green
+    } catch (error) {}
+}
 ```
 
 <hr />
@@ -236,7 +246,12 @@ Assert that a value's type matches one or more types.
 **Example:**
 
 ```typescript
-function foo(input: string | number | symbol | boolean) {    try {        assertIsTypeOf(input, 'number', 'boolean');        input; // number | boolean    } catch (error) {}}
+function foo(input: string | number | symbol | boolean) {
+    try {
+        assertIsTypeOf(input, 'number', 'boolean');
+        input; // number | boolean
+    } catch (error) {}
+}
 ```
 
 <hr />
@@ -253,7 +268,12 @@ Assert that a value's type *does not* match one or more types.
 **Example:**
 
 ```typescript
-function foo(input: string | number | symbol | boolean) {    try {        assertIsNotTypeOf(input, 'number', 'boolean');        input; // string | symbol    } catch (error) {}}
+function foo(input: string | number | symbol | boolean) {
+    try {
+        assertIsNotTypeOf(input, 'number', 'boolean');
+        input; // string | symbol
+    } catch (error) {}
+}
 ```
 
 <hr />
@@ -276,7 +296,11 @@ Check that a value is an instance of one or more prototypes.
 **Example:**
 
 ```typescript
-function foo(input: Red | Yellow | Green | Blue) {    if (isInstanceOf(input, Yellow, Blue)) {        input; // Yellow | Blue    }}
+function foo(input: Red | Yellow | Green | Blue) {
+    if (isInstanceOf(input, Yellow, Blue)) {
+        input; // Yellow | Blue
+    }
+}
 ```
 
 <hr />
@@ -293,7 +317,11 @@ Check that a value is *not* an instance of one or more prototypes.
 **Example:**
 
 ```typescript
-function foo(input: Red | Yellow | Green | Blue) {    if (isNotInstanceOf(input, Yellow, Blue)) {        input; // Red | Green    }}
+function foo(input: Red | Yellow | Green | Blue) {
+    if (isNotInstanceOf(input, Yellow, Blue)) {
+        input; // Red | Green
+    }
+}
 ```
 
 <hr />
@@ -312,7 +340,11 @@ Check that a value's type matches one or more types.
 **Example:**
 
 ```typescript
-function foo(input: string | number | symbol | boolean) {    if (isTypeOf(input, 'number', 'boolean')) {        input; // number | boolean    }}
+function foo(input: string | number | symbol | boolean) {
+    if (isTypeOf(input, 'number', 'boolean')) {
+        input; // number | boolean
+    }
+}
 ```
 
 <hr />
@@ -329,7 +361,11 @@ Check that a value's type *does not* match one or more types.
 **Example:**
 
 ```typescript
-function foo(input: string | number | symbol | boolean) {    if (isNotTypeOf(input, 'number', 'boolean')) {        input; // string | symbol    }}
+function foo(input: string | number | symbol | boolean) {
+    if (isNotTypeOf(input, 'number', 'boolean')) {
+        input; // string | symbol
+    }
+}
 ```
 
 <hr />
@@ -478,29 +514,32 @@ Assert that a condition is true.
 **Example:**
 
 ```typescript
-function foo(input: number) {    assert(input === 1);    input; // 1}
+function foo(input: number) {
+    assert(input === 1);
+    input; // 1
+}
 ```
 
 <hr />
 
-<h3 id="guarantee"><code>guarantee(value, [fallback])</code></h3>
+<h3 id="guarantee"><code>guarantee(value)</code></h3>
 
-Guarantee that a value is not nullish *(`null` or `undefined`)*, with an optional fallback.
+Guarantee that a value is not nullish *(`null` or `undefined`)*.
 
 | Param | Type | Description |
 | --- | --- | --- |
 | value | `unknown` | The value to guarantee |
-| [fallback] | `unknown` | An optional fallback value |
 
 **Returns:** 
 
-`value` or `fallback` if either are not nullish, otherwise will `throw`
+`value` if not nullish, otherwise will `throw`
 
 **Example:**
 
 ```typescript
-// Value will be `null | Element`const foo = document.querySelectorAll('.foo');// Value will be `Element`.const bar = guarantee(document.querySelectorAll('.bar'));
+// Value will be `null | Element`
+const foo = document.querySelectorAll('.foo');
+
+// Value will be `Element`.
+const bar = guarantee(document.querySelectorAll('.bar'));
 ```
-
-<hr />
-

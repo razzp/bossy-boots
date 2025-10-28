@@ -1,7 +1,7 @@
 import { assertIsNotNullish } from '../assertions/type/assertIsNotNullish';
 
 /**
- * Guarantee that a value is not nullish *(`null` or `undefined`)*, with an optional fallback.
+ * Guarantee that a value is not nullish *(`null` or `undefined`)*.
  * @memberof Utils
  * @since 1.0.0
  *
@@ -13,19 +13,15 @@ import { assertIsNotNullish } from '../assertions/type/assertIsNotNullish';
  * const bar = guarantee(document.querySelectorAll('.bar'));
  *
  * @param {unknown} value The value to guarantee
- * @param {unknown} [fallback] An optional fallback value
  *
- * @returns {unknown} `value` or `fallback` if either are not nullish, otherwise will `throw`
+ * @returns {unknown} `value` if not nullish, otherwise will `throw`
  */
-function guarantee<T, U = never>(value: T, fallback?: U): NonNullable<T | U> {
-    // If value is nullish, try using fallback instead.
-    const result = value ?? fallback;
-
-    // Assert that the result is not nullish.
-    assertIsNotNullish(result);
+function guarantee<T>(value: T): NonNullable<T> {
+    // Assert that the value is not nullish.
+    assertIsNotNullish(value);
 
     // Result is not nullish. Return it.
-    return result;
+    return value;
 }
 
 export { guarantee };
