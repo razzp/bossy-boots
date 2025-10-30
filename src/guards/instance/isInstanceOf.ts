@@ -2,20 +2,12 @@ import type { InstanceOf } from '../../aliases/InstanceOf';
 
 /**
  * Check that a value is an instance of one or more prototypes.
- * @memberof Guards.Instance
- * @since 1.0.0
  *
- * @example
- * function foo(input: Red | Yellow | Green | Blue) {
- *     if (isInstanceOf(input, Yellow, Blue)) {
- *         input; // Yellow | Blue
- *     }
- * }
- *
- * @param {unknown} value The value to assert
- * @param {Function[]} prototypes The prototype(s) to check
- *
- * @returns {boolean}
+ * @param value - The value to assert
+ * @param prototypes - The prototype(s) to check
+ * @returns `true` if check passes, otherwise `false`
+ * 
+ * @public
  */
 function isInstanceOf<T extends Function[]>(
     value: unknown,

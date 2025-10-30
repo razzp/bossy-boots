@@ -3,12 +3,10 @@ import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value *does not* have a type of `null`.
- * @memberof Assertions.Type
- * @since 1.0.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
  *
- * @returns {void}
+ * @public
  */
 function assertIsNotNull<T>(value: T): asserts value is Exclude<T, null> {
     if (isNull(value)) {

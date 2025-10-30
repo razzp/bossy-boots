@@ -3,12 +3,10 @@ import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value is *not* an instance of `HTMLElement`.
- * @memberof Assertions.Instance
- * @since 1.2.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
  *
- * @returns {void}
+ * @public
  */
 function assertIsNotHTMLElement<T>(
     value: T

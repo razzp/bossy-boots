@@ -2,12 +2,11 @@ import { isHTMLElement } from './isHTMLElement';
 
 /**
  * Check that a value is *not* an instance of `HTMLElement`.
- * @memberof Guards.Instance
- * @since 1.2.0
  *
- * @param {unknown} value The value to assert
- *
- * @returns {boolean}
+ * @param value - The value to assert
+ * @returns `true` if check passes, otherwise `false`
+ * 
+ * @public
  */
 function isNotHTMLElement<T>(
     value: T

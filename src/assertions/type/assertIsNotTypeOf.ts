@@ -6,21 +6,11 @@ import type { TypeOf } from '../../aliases/TypeOf';
 
 /**
  * Assert that a value's type *does not* match one or more types.
- * @memberof Assertions.Type
- * @since 1.0.0
  *
- * @example
- * function foo(input: string | number | symbol | boolean) {
- *     try {
- *         assertIsNotTypeOf(input, 'number', 'boolean');
- *         input; // string | symbol
- *     } catch (error) {}
- * }
+ * @param value - The value to assert
+ * @param types - The types(s) to check
  *
- * @param {unknown} value The value to assert
- * @param {Array.<Primitive>} types The types(s) to check
- *
- * @returns {void}
+ * @public
  */
 function assertIsNotTypeOf<T, U extends Primitive[]>(
     value: T,

@@ -6,21 +6,11 @@ import type { InstanceOf } from '../../aliases/InstanceOf';
 
 /**
  * Assert that a value is an instance of one or more prototypes.
- * @memberof Assertions.Instance
- * @since 1.0.0
  *
- * @example
- * function foo(input: Red | Yellow | Green | Blue) {
- *     try {
- *         assertIsInstanceOf(input, Yellow, Blue);
- *         input; // Yellow | Blue
- *     } catch (error) {}
- * }
+ * @param value - The value to assert
+ * @param prototypes - The prototype(s) to check
  *
- * @param {unknown} value The value to assert
- * @param {Function[]} prototypes The prototype(s) to check
- *
- * @returns {void}
+ * @public
  */
 function assertIsInstanceOf<T extends Function[]>(
     value: unknown,

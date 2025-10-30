@@ -1,11 +1,10 @@
 /**
  * Check that a value has a type of `string`.
- * @memberof Guards.Type
- * @since 1.0.0
  *
- * @param {unknown} value The value to assert
- *
- * @returns {boolean}
+ * @param value - The value to assert
+ * @returns `true` if check passes, otherwise `false`
+ * 
+ * @public
  */
 function isString(value: unknown): value is string {
     return typeof value === 'string';

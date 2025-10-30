@@ -3,12 +3,10 @@ import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value *does not* have a type of `undefined`.
- * @memberof Assertions.Type
- * @since 1.0.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
  *
- * @returns {void}
+ * @public
  */
 function assertIsNotUndefined<T>(
     value: T

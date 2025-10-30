@@ -2,12 +2,11 @@ import { isElement } from './isElement';
 
 /**
  * Check that a value is *not* an instance of `Element`.
- * @memberof Guards.Instance
- * @since 1.0.0
  *
- * @param {unknown} value The value to assert
- *
- * @returns {boolean}
+ * @param value - The value to assert
+ * @returns `true` if check passes, otherwise `false`
+ * 
+ * @public
  */
 function isNotElement<T>(
     value: T

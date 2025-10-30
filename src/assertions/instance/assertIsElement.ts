@@ -3,12 +3,10 @@ import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value is an instance of `Element`.
- * @memberof Assertions.Instance
- * @since 1.0.0
- *
- * @param {unknown} value The value to assert
- *
- * @returns {void}
+ * 
+ * @param value - The value to assert
+ * 
+ * @public
  */
 function assertIsElement(value: unknown): asserts value is Element {
     if (isNotElement(value)) {

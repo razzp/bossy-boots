@@ -7,21 +7,11 @@ import type { Primitive } from '../../aliases/Primitive';
 
 /**
  * Assert that a value's type matches one or more types.
- * @memberof Assertions.Type
- * @since 1.0.0
  *
- * @example
- * function foo(input: string | number | symbol | boolean) {
- *     try {
- *         assertIsTypeOf(input, 'number', 'boolean');
- *         input; // number | boolean
- *     } catch (error) {}
- * }
+ * @param value - The value to assert
+ * @param types - The types(s) to check
  *
- * @param {unknown} value The value to assert
- * @param {Array.<Primitive>} types The types(s) to check
- *
- * @returns {void}
+ * @public
  */
 function assertIsTypeOf<T extends Primitive[]>(
     value: unknown,
