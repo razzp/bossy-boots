@@ -26,9 +26,12 @@
   "type": "module",
   "sideEffects": false,
   "main": "./dist/main.cjs",
+  "module": "./dist/main.js",
   "exports": {
-    "import": "./dist/main.js",
-    "require": "./dist/main.cjs"
+    ".": {
+      "import": "./dist/main.js",
+      "require": "./dist/main.cjs"
+    }
   },
   "types": "./types/main.d.ts",
   "files": [
