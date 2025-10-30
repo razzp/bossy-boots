@@ -1,7 +1,6 @@
-import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 
-const config = {
+export default  {
     input: 'src/main.ts',
     output: [
         {
@@ -13,12 +12,5 @@ const config = {
             format: 'esm',
         },
     ],
-    plugins: [
-        resolve({
-            extensions: ['.ts'],
-        }),
-        typescript(),
-    ],
+    plugins: [typescript()],
 };
-
-export default config;
