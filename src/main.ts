@@ -82,3 +82,7 @@ export { isNotUndefined } from './guards/type/isNotUndefined';
 
 export { assert } from './utils/assert';
 export { guarantee } from './utils/guarantee';
+
+// Etc
+
+export { AssertionError } from './AssertionError';
