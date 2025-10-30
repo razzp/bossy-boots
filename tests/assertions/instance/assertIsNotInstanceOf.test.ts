@@ -3,7 +3,7 @@
  */
 
 import { assertIsNotInstanceOf } from '../../../src/assertions/instance/assertIsNotInstanceOf';
-import { AssertionError } from '../../../src/internal/AssertionError';
+import { AssertionError } from '../../../src/AssertionError';
 
 test('Given instance(s) that match the input, throws', () => {
     const date = new Date();

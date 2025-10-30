@@ -1,5 +1,5 @@
 import { isNotTypeOf } from '../../guards/type/isNotTypeOf';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 import { toReadableList } from '../../internal/toReadableList';
 
 import type { TypeOf } from '../../aliases/TypeOf';

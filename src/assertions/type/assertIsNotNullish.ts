@@ -1,5 +1,5 @@
 import { isNullish } from '../../guards/type/isNullish';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value *does not* have a type of `null` or `undefined`.

@@ -1,5 +1,5 @@
 import { assertIsNotString } from '../../../src/assertions/type/assertIsNotString';
-import { AssertionError } from '../../../src/internal/AssertionError';
+import { AssertionError } from '../../../src/AssertionError';
 
 test('Given a non-string input, does not throw', () => {
     expect(() => assertIsNotString(1)).not.toThrow();

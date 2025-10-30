@@ -1,5 +1,5 @@
 import { isSymbol } from '../../guards/type/isSymbol';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value *does not* have a type of `symbol`.

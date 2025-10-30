@@ -1,5 +1,5 @@
 import { assert } from '../../src/utils/assert';
-import { AssertionError } from '../../src/internal/AssertionError';
+import { AssertionError } from '../../src/AssertionError';
 
 test('Given a true condition, does not throw', () => {
     expect(() => assert(true)).not.toThrow();

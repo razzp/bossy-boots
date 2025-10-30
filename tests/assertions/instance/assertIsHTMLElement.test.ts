@@ -3,7 +3,7 @@
  */
 
 import { assertIsHTMLElement } from '../../../src/assertions/instance/assertIsHTMLElement';
-import { AssertionError } from '../../../src/internal/AssertionError';
+import { AssertionError } from '../../../src/AssertionError';
 
 test('Given an HTMLElement, does not throw', () => {
     expect(() =>

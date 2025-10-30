@@ -1,5 +1,5 @@
 import { isNotElement } from '../../guards/instance/isNotElement';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value is an instance of `Element`.

@@ -1,5 +1,5 @@
 import { isUndefined } from '../../guards/type/isUndefined';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value *does not* have a type of `undefined`.

@@ -1,4 +1,4 @@
-import { AssertionError } from '../internal/AssertionError';
+import { AssertionError } from '../AssertionError';
 
 /**
  * Assert that a condition is true.

@@ -3,7 +3,7 @@
  */
 
 import { assertIsElement } from '../../../src/assertions/instance/assertIsElement';
-import { AssertionError } from '../../../src/internal/AssertionError';
+import { AssertionError } from '../../../src/AssertionError';
 
 test('Given an Element, does not throw', () => {
     expect(() => assertIsElement(document.createElement('div'))).not.toThrow();

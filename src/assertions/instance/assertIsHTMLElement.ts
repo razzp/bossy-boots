@@ -1,5 +1,5 @@
 import { isNotHTMLElement } from '../../guards/instance/isNotHTMLElement';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value is an instance of `HTMLElement`.

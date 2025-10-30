@@ -1,5 +1,5 @@
 import { isTypeOf } from '../../guards/type/isTypeOf';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 
 import type { Primitive } from '../../aliases/Primitive';
 import type { TypeOf } from '../../aliases/TypeOf';

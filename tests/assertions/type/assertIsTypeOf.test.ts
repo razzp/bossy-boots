@@ -1,5 +1,5 @@
 import { assertIsTypeOf } from '../../../src/assertions/type/assertIsTypeOf';
-import { AssertionError } from '../../../src/internal/AssertionError';
+import { AssertionError } from '../../../src/AssertionError';
 
 test('Given type(s) that match the input, does not throw', () => {
     const bool = true;

@@ -1,4 +1,4 @@
-import { AssertionError } from '../../src/internal/AssertionError';
+import { AssertionError } from '../../src/AssertionError';
 import { guarantee } from '../../src/utils/guarantee';
 
 test('Given a value that is non-nullish, returns that value', () => {

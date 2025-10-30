@@ -1,5 +1,5 @@
 import { isNumber } from '../../guards/type/isNumber';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 
 /**
  * Assert that a value *does not* have a type of `number`.

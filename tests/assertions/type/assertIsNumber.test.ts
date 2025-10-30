@@ -1,5 +1,5 @@
 import { assertIsNumber } from '../../../src/assertions/type/assertIsNumber';
-import { AssertionError } from '../../../src/internal/AssertionError';
+import { AssertionError } from '../../../src/AssertionError';
 
 test('Given a non-number input, throws', () => {
     expect(() => assertIsNumber('foo')).toThrow(AssertionError);

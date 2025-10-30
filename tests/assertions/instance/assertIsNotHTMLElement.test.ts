@@ -3,7 +3,7 @@
  */
 
 import { assertIsNotHTMLElement } from '../../../src/assertions/instance/assertIsNotHTMLElement';
-import { AssertionError } from '../../../src/internal/AssertionError';
+import { AssertionError } from '../../../src/AssertionError';
 
 test('Given an HTMLElement, throws', () => {
     expect(() => assertIsNotHTMLElement(document.createElement('div'))).toThrow(

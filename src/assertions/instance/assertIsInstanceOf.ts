@@ -1,5 +1,5 @@
 import { isNotInstanceOf } from '../../guards/instance/isNotInstanceOf';
-import { AssertionError } from '../../internal/AssertionError';
+import { AssertionError } from '../../AssertionError';
 import { toReadableList } from '../../internal/toReadableList';
 
 import type { InstanceOf } from '../../aliases/InstanceOf';

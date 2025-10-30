@@ -1,5 +1,5 @@
 import { assertIsBoolean } from '../../../src/assertions/type/assertIsBoolean';
-import { AssertionError } from '../../../src/internal/AssertionError';
+import { AssertionError } from '../../../src/AssertionError';
 
 test('Given a non-boolean input, throws', () => {
     expect(() => assertIsBoolean('foo')).toThrow(AssertionError);
