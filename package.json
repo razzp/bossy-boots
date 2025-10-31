@@ -39,10 +39,10 @@
     ],
     "scripts": {
         "build": "rimraf dist && rollup --config && npm run types",
-        "biome": "biome check --write",
         "types": "rimraf types && tsc --project tsconfig.types.json && api-extractor run --local --verbose",
         "test": "jest --verbose --coverage",
         "docs": "api-documenter markdown --input-folder temp --output-folder docs",
+        "biome": "biome check --write",
         "prepublishOnly": "npm run test"
     },
     "devDependencies": {
