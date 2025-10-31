@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.0 (2023-11-15)
+## 1.2.0 (2025-10-31)
 
 ### Added
 
@@ -8,14 +8,20 @@
 
 ### Changed
 
-- TypeScript declaration maps are now generated, which should result in a better IDE experience.
-- Include `sideEffects: false` flag in `package.json`, which should help bundlers with tree-shaking and general performance.
 - Performance and readability improvements to typings.
-- Improvements to documentation.
+- Typings are now rolled up using Microsoft's API Extractor.
+- Docs are now generated using API Extractor's companion tool, api-documenter.
+- Annotations now adhere to TSDoc specification.
+- Replaced ESLint and Prettier with Biome.
 
 ### Fixed
 
 - JSDoc versions are now correct for all methods.
+- `AssertionError` is now publicly exposed.
+
+### Security
+
+- Major version updates to all NPM packages.
 
 ## 1.0.1 (2022-05-11)
 
