@@ -1,10 +1,10 @@
+import { AssertionError } from '../../../src/AssertionError';
 import { assertIsSymbol } from '../../../src/assertions/type/assertIsSymbol';
-import { AssertionError } from '../../../src/internal/AssertionError';
 
 test('Given a non-symbol input, throws', () => {
-    expect(() => assertIsSymbol('foo')).toThrowError(AssertionError);
+    expect(() => assertIsSymbol('foo')).toThrow(AssertionError);
 });
 
 test('Given a symbol input, does not throw', () => {
-    expect(() => assertIsSymbol(Symbol())).not.toThrowError();
+    expect(() => assertIsSymbol(Symbol())).not.toThrow();
 });

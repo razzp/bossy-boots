@@ -1,4 +1,4 @@
-import { AssertionError } from '../../src/internal/AssertionError';
+import { AssertionError } from '../../src/AssertionError';
 
 test('Error is constructed properly', () => {
     const error = new AssertionError('foo');

@@ -1,36 +1,25 @@
-import { isNotInstanceOf } from '../../guards/instance/isNotInstanceOf';
-import { AssertionError } from '../../internal/AssertionError';
-import { toReadableList } from '../../internal/toReadableList';
-
 import type { InstanceOf } from '../../aliases/InstanceOf';
+import { AssertionError } from '../../AssertionError';
+import { isNotInstanceOf } from '../../guards/instance/isNotInstanceOf';
+import { toReadableList } from '../../internal/toReadableList';
 
 /**
  * Assert that a value is an instance of one or more prototypes.
- * @memberof Assertions.Instance
- * @since 0.1.0
  *
- * @example
- * function foo(input: Red | Yellow | Green | Blue) {
- *     try {
- *         assertIsInstanceOf(input, Yellow, Blue);
- *         input; // Yellow | Blue
- *     } catch (error) {}
- * }
+ * @param value - The value to assert
+ * @param prototypes - The prototype(s) to check
  *
- * @param {unknown} value The value to assert
- * @param {Function[]} prototypes The prototype(s) to check
- *
- * @returns {void}
+ * @public
  */
-function assertIsInstanceOf<TPrototypes extends Function[]>(
+function assertIsInstanceOf<T extends Function[]>(
     value: unknown,
-    ...prototypes: TPrototypes
-): asserts value is InstanceOf<TPrototypes> {
+    ...prototypes: T
+): asserts value is InstanceOf<T> {
     if (isNotInstanceOf(value, ...prototypes)) {
         throw new AssertionError(
             `Value should be ${toReadableList(
-                prototypes.map(({ name }) => name)
-            )}`
+                prototypes.map(({ name }) => name),
+            )}`,
         );
     }
 }

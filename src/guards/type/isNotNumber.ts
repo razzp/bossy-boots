@@ -1,19 +1,14 @@
 import { isNumber } from './isNumber';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Check that a value *does not* have a type of `number`.
- * @memberof Guards.Type
- * @since 0.1.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
+ * @returns `true` if check passes, otherwise `false`
  *
- * @returns {boolean}
+ * @public
  */
-function isNotNumber<TValue>(
-    value: TValue
-): value is NotTypeOf<TValue, 'number'> {
+function isNotNumber<T>(value: T): value is Exclude<T, number> {
     return !isNumber(value);
 }
 

@@ -1,20 +1,14 @@
+import { AssertionError } from '../../AssertionError';
 import { isBoolean } from '../../guards/type/isBoolean';
-import { AssertionError } from '../../internal/AssertionError';
-
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
 
 /**
  * Assert that a value *does not* have a type of `boolean`.
- * @memberof Assertions.Type
- * @since 0.1.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
  *
- * @returns {void}
+ * @public
  */
-function assertIsNotBoolean<TValue>(
-    value: TValue
-): asserts value is NotTypeOf<TValue, 'boolean'> {
+function assertIsNotBoolean<T>(value: T): asserts value is Exclude<T, boolean> {
     if (isBoolean(value)) {
         throw new AssertionError('Value should not be boolean');
     }

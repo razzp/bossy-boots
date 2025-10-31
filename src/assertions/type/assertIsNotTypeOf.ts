@@ -1,31 +1,20 @@
-import { isTypeOf } from '../../guards/type/isTypeOf';
-import { AssertionError } from '../../internal/AssertionError';
-
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
 import type { Primitive } from '../../aliases/Primitive';
+import type { TypeOf } from '../../aliases/TypeOf';
+import { AssertionError } from '../../AssertionError';
+import { isTypeOf } from '../../guards/type/isTypeOf';
 
 /**
  * Assert that a value's type *does not* match one or more types.
- * @memberof Assertions.Type
- * @since 0.1.0
  *
- * @example
- * function foo(input: string | number | symbol | boolean) {
- *     try {
- *         assertIsNotTypeOf(input, 'number', 'boolean');
- *         input; // string | symbol
- *     } catch (error) {}
- * }
+ * @param value - The value to assert
+ * @param types - The types(s) to check
  *
- * @param {unknown} value The value to assert
- * @param {Array.<Primitive>} types The types(s) to check
- *
- * @returns {void}
+ * @public
  */
-function assertIsNotTypeOf<TValue, TTypes extends Primitive[]>(
-    value: TValue,
-    ...types: TTypes
-): asserts value is NotTypeOf<TValue, TTypes> {
+function assertIsNotTypeOf<T, U extends Primitive[]>(
+    value: T,
+    ...types: U
+): asserts value is Exclude<T, TypeOf<U>> {
     if (isTypeOf(value, ...types)) {
         throw new AssertionError(`Value should not be ${typeof value}`);
     }

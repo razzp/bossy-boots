@@ -1,14 +1,12 @@
+import { AssertionError } from '../../AssertionError';
 import { isNotSymbol } from '../../guards/type/isNotSymbol';
-import { AssertionError } from '../../internal/AssertionError';
 
 /**
  * Assert that a value has a type of `symbol`.
- * @memberof Assertions.Type
- * @since 0.1.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
  *
- * @returns {void}
+ * @public
  */
 function assertIsSymbol(value: unknown): asserts value is symbol {
     if (isNotSymbol(value)) {

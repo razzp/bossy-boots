@@ -1,14 +1,12 @@
+import { AssertionError } from '../../AssertionError';
 import { isNotUndefined } from '../../guards/type/isNotUndefined';
-import { AssertionError } from '../../internal/AssertionError';
 
 /**
  * Assert that a value has a type of `undefined`.
- * @memberof Assertions.Type
- * @since 0.1.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
  *
- * @returns {void}
+ * @public
  */
 function assertIsUndefined(value: unknown): asserts value is undefined {
     if (isNotUndefined(value)) {

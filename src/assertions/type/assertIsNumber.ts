@@ -1,14 +1,12 @@
+import { AssertionError } from '../../AssertionError';
 import { isNotNumber } from '../../guards/type/isNotNumber';
-import { AssertionError } from '../../internal/AssertionError';
 
 /**
  * Assert that a value has a type of `number`.
- * @memberof Assertions.Type
- * @since 0.1.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
  *
- * @returns {void}
+ * @public
  */
 function assertIsNumber(value: unknown): asserts value is number {
     if (isNotNumber(value)) {

@@ -1,10 +1,9 @@
-import type { PrimitivesMap } from '../interfaces/PrimitivesMap';
-import type { Primitive } from './Primitive';
+import type { Primitive, PrimitiveMap } from './Primitive';
 
 type TypeOf<T> = T extends Array<infer X>
     ? TypeOf<X>
     : T extends Primitive
-    ? PrimitivesMap[T]
-    : never;
+      ? PrimitiveMap[T]
+      : never;
 
-export { TypeOf };
+export type { TypeOf };

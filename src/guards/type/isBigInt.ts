@@ -1,11 +1,10 @@
 /**
  * Check that a value has a type of `bigint`.
- * @memberof Guards.Type
- * @since 0.1.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
+ * @returns `true` if check passes, otherwise `false`
  *
- * @returns {boolean}
+ * @public
  */
 function isBigInt(value: unknown): value is bigint {
     return typeof value === 'bigint';

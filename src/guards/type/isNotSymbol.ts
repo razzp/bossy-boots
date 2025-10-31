@@ -1,19 +1,14 @@
 import { isSymbol } from './isSymbol';
 
-import type { NotTypeOf } from '../../aliases/NotTypeOf';
-
 /**
  * Check that a value *does not* have a type of `symbol`.
- * @memberof Guards.Type
- * @since 0.1.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
+ * @returns `true` if check passes, otherwise `false`
  *
- * @returns {boolean}
+ * @public
  */
-function isNotSymbol<TValue>(
-    value: TValue
-): value is NotTypeOf<TValue, 'symbol'> {
+function isNotSymbol<T>(value: T): value is Exclude<T, symbol> {
     return !isSymbol(value);
 }
 

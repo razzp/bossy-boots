@@ -1,14 +1,12 @@
+import { AssertionError } from '../../AssertionError';
 import { isNotElement } from '../../guards/instance/isNotElement';
-import { AssertionError } from '../../internal/AssertionError';
 
 /**
  * Assert that a value is an instance of `Element`.
- * @memberof Assertions.Instance
- * @since 0.1.0
  *
- * @param {unknown} value The value to assert
+ * @param value - The value to assert
  *
- * @returns {void}
+ * @public
  */
 function assertIsElement(value: unknown): asserts value is Element {
     if (isNotElement(value)) {
