@@ -38,7 +38,7 @@
         "dist"
     ],
     "scripts": {
-        "build": "rimraf dist && rollup --config && npm run types",
+        "build": "npm run biome && rimraf dist && rollup --config && npm run types",
         "types": "rimraf types && tsc --project tsconfig.types.json && api-extractor run --local --verbose",
         "test": "jest",
         "docs": "api-documenter markdown --input-folder temp --output-folder docs",
