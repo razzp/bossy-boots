@@ -1,5 +1,5 @@
-import { isNotBoolean } from '../../guards/type/isNotBoolean';
 import { AssertionError } from '../../AssertionError';
+import { isNotBoolean } from '../../guards/type/isNotBoolean';
 
 /**
  * Assert that a value has a type of `boolean`.

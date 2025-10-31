@@ -1,5 +1,5 @@
-import { isNull } from '../../guards/type/isNull';
 import { AssertionError } from '../../AssertionError';
+import { isNull } from '../../guards/type/isNull';
 
 /**
  * Assert that a value *does not* have a type of `null`.

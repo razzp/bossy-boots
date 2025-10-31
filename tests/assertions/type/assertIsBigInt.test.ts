@@ -1,5 +1,5 @@
-import { assertIsBigInt } from '../../../src/assertions/type/assertIsBigInt';
 import { AssertionError } from '../../../src/AssertionError';
+import { assertIsBigInt } from '../../../src/assertions/type/assertIsBigInt';
 
 test('Given a non-bigint input, throws', () => {
     expect(() => assertIsBigInt('foo')).toThrow(AssertionError);

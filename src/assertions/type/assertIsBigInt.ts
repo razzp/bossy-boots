@@ -1,5 +1,5 @@
-import { isNotBigInt } from '../../guards/type/isNotBigInt';
 import { AssertionError } from '../../AssertionError';
+import { isNotBigInt } from '../../guards/type/isNotBigInt';
 
 /**
  * Assert that a value has a type of `bigint`.

@@ -1,6 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
 
-export default  {
+export default {
     input: 'src/main.ts',
     output: [
         {

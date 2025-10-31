@@ -5,7 +5,7 @@ import { AssertionError } from '../AssertionError';
  *
  * @param condition - The condition to assert
  * @param message - An optional message to include if the assertion fails
- * 
+ *
  * @throws {@link AssertionError}
  * Thrown if `condition` is not met.
  *

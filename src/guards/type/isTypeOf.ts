@@ -7,7 +7,7 @@ import type { TypeOf } from '../../aliases/TypeOf';
  * @param value - The value to assert
  * @param types - The types(s) to check
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isTypeOf<T extends Primitive[]>(

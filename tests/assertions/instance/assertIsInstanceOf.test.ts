@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { assertIsInstanceOf } from '../../../src/assertions/instance/assertIsInstanceOf';
 import { AssertionError } from '../../../src/AssertionError';
+import { assertIsInstanceOf } from '../../../src/assertions/instance/assertIsInstanceOf';
 
 test('Given instance(s) that match the input, does not throw', () => {
     const date = new Date();
@@ -19,6 +19,6 @@ test('Given instance(s) that do not match the input, throws', () => {
     expect(() => assertIsInstanceOf(null, Date)).toThrow(AssertionError);
     expect(() => assertIsInstanceOf(null, Element)).toThrow(AssertionError);
     expect(() => assertIsInstanceOf(null, Element, Date)).toThrow(
-        AssertionError
+        AssertionError,
     );
 });

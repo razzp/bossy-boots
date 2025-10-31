@@ -5,7 +5,7 @@ import { isString } from './isString';
  *
  * @param value - The value to assert
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isNotString<T>(value: T): value is Exclude<T, string> {

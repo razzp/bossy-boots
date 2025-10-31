@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { assertIsElement } from '../../../src/assertions/instance/assertIsElement';
 import { AssertionError } from '../../../src/AssertionError';
+import { assertIsElement } from '../../../src/assertions/instance/assertIsElement';
 
 test('Given an Element, does not throw', () => {
     expect(() => assertIsElement(document.createElement('div'))).not.toThrow();

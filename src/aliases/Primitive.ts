@@ -10,4 +10,4 @@ type PrimitiveMap = {
 
 type Primitive = keyof PrimitiveMap;
 
-export { Primitive, PrimitiveMap };
+export type { Primitive, PrimitiveMap };

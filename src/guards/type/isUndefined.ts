@@ -3,7 +3,7 @@
  *
  * @param value - The value to assert
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isUndefined(value: unknown): value is undefined {

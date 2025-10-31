@@ -5,7 +5,7 @@ import { isNumber } from './isNumber';
  *
  * @param value - The value to assert
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isNotNumber<T>(value: T): value is Exclude<T, number> {

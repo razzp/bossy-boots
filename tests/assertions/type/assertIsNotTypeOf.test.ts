@@ -1,5 +1,5 @@
-import { assertIsNotTypeOf } from '../../../src/assertions/type/assertIsNotTypeOf';
 import { AssertionError } from '../../../src/AssertionError';
+import { assertIsNotTypeOf } from '../../../src/assertions/type/assertIsNotTypeOf';
 
 test('Given type(s) that match the input, throws', () => {
     const bool = true;
@@ -7,11 +7,11 @@ test('Given type(s) that match the input, throws', () => {
 
     expect(() => assertIsNotTypeOf(bool, 'boolean')).toThrow(AssertionError);
     expect(() => assertIsNotTypeOf(bool, 'boolean', 'string')).toThrow(
-        AssertionError
+        AssertionError,
     );
     expect(() => assertIsNotTypeOf(string, 'string')).toThrow(AssertionError);
     expect(() => assertIsNotTypeOf(string, 'string', 'boolean')).toThrow(
-        AssertionError
+        AssertionError,
     );
 });
 

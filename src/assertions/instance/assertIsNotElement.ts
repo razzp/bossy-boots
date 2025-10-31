@@ -1,5 +1,5 @@
-import { isElement } from '../../guards/instance/isElement';
 import { AssertionError } from '../../AssertionError';
+import { isElement } from '../../guards/instance/isElement';
 
 /**
  * Assert that a value is *not* an instance of `Element`.
@@ -9,7 +9,7 @@ import { AssertionError } from '../../AssertionError';
  * @public
  */
 function assertIsNotElement<T>(
-    value: T
+    value: T,
 ): asserts value is Exclude<T, InstanceType<typeof Element>> {
     if (isElement(value)) {
         throw new AssertionError('Value should not be Element');

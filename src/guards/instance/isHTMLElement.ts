@@ -5,7 +5,7 @@ import { isInstanceOf } from './isInstanceOf';
  *
  * @param value - The value to assert
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isHTMLElement(value: unknown): value is HTMLElement {

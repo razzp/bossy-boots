@@ -5,7 +5,7 @@ import { isBoolean } from './isBoolean';
  *
  * @param value - The value to assert
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isNotBoolean<T>(value: T): value is Exclude<T, boolean> {

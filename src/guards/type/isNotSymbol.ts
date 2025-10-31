@@ -5,7 +5,7 @@ import { isSymbol } from './isSymbol';
  *
  * @param value - The value to assert
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isNotSymbol<T>(value: T): value is Exclude<T, symbol> {

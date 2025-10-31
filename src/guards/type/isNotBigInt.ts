@@ -5,7 +5,7 @@ import { isBigInt } from './isBigInt';
  *
  * @param value - The value to assert
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isNotBigInt<T>(value: T): value is Exclude<T, bigint> {

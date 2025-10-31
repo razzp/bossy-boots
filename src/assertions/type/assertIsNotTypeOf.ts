@@ -1,8 +1,7 @@
-import { isTypeOf } from '../../guards/type/isTypeOf';
-import { AssertionError } from '../../AssertionError';
-
 import type { Primitive } from '../../aliases/Primitive';
 import type { TypeOf } from '../../aliases/TypeOf';
+import { AssertionError } from '../../AssertionError';
+import { isTypeOf } from '../../guards/type/isTypeOf';
 
 /**
  * Assert that a value's type *does not* match one or more types.

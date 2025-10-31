@@ -1,5 +1,5 @@
-import { isNotNullish } from '../../guards/type/isNotNullish';
 import { AssertionError } from '../../AssertionError';
+import { isNotNullish } from '../../guards/type/isNotNullish';
 
 /**
  * Assert that a value has a type of `null` or `undefined`.

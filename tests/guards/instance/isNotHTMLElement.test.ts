@@ -11,8 +11,8 @@ test('Given an HTMLElement, returns false', () => {
 test('Given an input that is not an HTMLElement, returns true', () => {
     expect(
         isNotHTMLElement(
-            document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-        )
+            document.createElementNS('http://www.w3.org/2000/svg', 'svg'),
+        ),
     ).toBe(true);
 
     expect(isNotHTMLElement(null)).toBe(true);

@@ -1,6 +1,6 @@
 /**
  * The `Error` instance thrown when assertions fail.
- * 
+ *
  * @public
  */
 class AssertionError extends Error {

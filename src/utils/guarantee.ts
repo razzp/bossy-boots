@@ -5,10 +5,10 @@ import { assertIsNotNullish } from '../assertions/type/assertIsNotNullish';
  *
  * @param value - The value to guarantee
  * @returns `value` if not nullish, otherwise will throw
- * 
+ *
  * @throws {@link AssertionError}
  * Thrown if `value` is nullish.
- * 
+ *
  * @public
  */
 function guarantee<T>(value: T): NonNullable<T> {

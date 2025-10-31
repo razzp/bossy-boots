@@ -1,5 +1,5 @@
-import { assertIsSymbol } from '../../../src/assertions/type/assertIsSymbol';
 import { AssertionError } from '../../../src/AssertionError';
+import { assertIsSymbol } from '../../../src/assertions/type/assertIsSymbol';
 
 test('Given a non-symbol input, throws', () => {
     expect(() => assertIsSymbol('foo')).toThrow(AssertionError);

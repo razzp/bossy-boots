@@ -5,7 +5,7 @@ import { isUndefined } from './isUndefined';
  *
  * @param value - The value to assert
  * @returns `true` if check passes, otherwise `false`
- * 
+ *
  * @public
  */
 function isNotUndefined<T>(value: T): value is Exclude<T, undefined> {

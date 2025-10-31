@@ -1,7 +1,6 @@
-import { isInstanceOf } from '../../guards/instance/isInstanceOf';
-import { AssertionError } from '../../AssertionError';
-
 import type { InstanceOf } from '../../aliases/InstanceOf';
+import { AssertionError } from '../../AssertionError';
+import { isInstanceOf } from '../../guards/instance/isInstanceOf';
 
 /**
  * Assert that a value is *not* an instance of one or more prototypes.

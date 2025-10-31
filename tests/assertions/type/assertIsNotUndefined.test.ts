@@ -1,5 +1,5 @@
-import { assertIsNotUndefined } from '../../../src/assertions/type/assertIsNotUndefined';
 import { AssertionError } from '../../../src/AssertionError';
+import { assertIsNotUndefined } from '../../../src/assertions/type/assertIsNotUndefined';
 
 test('Given a non-undefined input, does not throw', () => {
     expect(() => assertIsNotUndefined('foo')).not.toThrow();

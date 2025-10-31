@@ -1,5 +1,5 @@
-import { isString } from '../../guards/type/isString';
 import { AssertionError } from '../../AssertionError';
+import { isString } from '../../guards/type/isString';
 
 /**
  * Assert that a value *does not* have a type of `string`.
