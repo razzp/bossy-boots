@@ -24,8 +24,6 @@ export function assertIsElement(value: unknown): asserts value is Element;
 // @public
 export function assertIsHTMLElement(value: unknown): asserts value is HTMLElement;
 
-// Warning: (ae-forgotten-export) The symbol "InstanceOf" needs to be exported by the entry point index.d.ts
-//
 // @public
 export function assertIsInstanceOf<T extends Function[]>(value: unknown, ...prototypes: T): asserts value is InstanceOf<T>;
 
@@ -59,9 +57,6 @@ export function assertIsNotString<T>(value: T): asserts value is Exclude<T, stri
 // @public
 export function assertIsNotSymbol<T>(value: T): asserts value is Exclude<T, symbol>;
 
-// Warning: (ae-forgotten-export) The symbol "Primitive" needs to be exported by the entry point index.d.ts
-// Warning: (ae-forgotten-export) The symbol "TypeOf" needs to be exported by the entry point index.d.ts
-//
 // @public
 export function assertIsNotTypeOf<T, U extends Primitive[]>(value: T, ...types: U): asserts value is Exclude<T, TypeOf<U>>;
 
@@ -91,6 +86,11 @@ export function assertIsUndefined(value: unknown): asserts value is undefined;
 
 // @public
 export function guarantee<T>(value: T): NonNullable<T>;
+
+// @public (undocumented)
+export type InstanceOf<T> = T extends Array<infer X> ? InstanceOf<X> : T extends {
+    prototype: infer X;
+} ? X : never;
 
 // @public
 export function isBigInt(value: unknown): value is bigint;
@@ -163,6 +163,23 @@ export function isTypeOf<T extends Primitive[]>(value: unknown, ...types: T): va
 
 // @public
 export function isUndefined(value: unknown): value is undefined;
+
+// @public (undocumented)
+export type Primitive = keyof PrimitiveMap;
+
+// @public (undocumented)
+export type PrimitiveMap = {
+    boolean: boolean;
+    bigint: bigint;
+    null: null;
+    number: number;
+    string: string;
+    symbol: symbol;
+    undefined: undefined;
+};
+
+// @public (undocumented)
+export type TypeOf<T> = T extends Array<infer X> ? TypeOf<X> : T extends Primitive ? PrimitiveMap[T] : never;
 
 // (No @packageDocumentation comment for this package)
 

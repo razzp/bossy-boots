@@ -1,3 +1,6 @@
+/**
+ * @public
+ */
 type PrimitiveMap = {
     boolean: boolean;
     bigint: bigint;
@@ -8,6 +11,9 @@ type PrimitiveMap = {
     undefined: undefined;
 };
 
+/**
+ * @public
+ */
 type Primitive = keyof PrimitiveMap;
 
 export type { Primitive, PrimitiveMap };
