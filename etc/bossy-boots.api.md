@@ -24,7 +24,7 @@ export function assertIsElement(value: unknown): asserts value is Element;
 // @public
 export function assertIsHTMLElement(value: unknown): asserts value is HTMLElement;
 
-// Warning: (ae-forgotten-export) The symbol "InstanceOf" needs to be exported by the entry point main.d.ts
+// Warning: (ae-forgotten-export) The symbol "InstanceOf" needs to be exported by the entry point index.d.ts
 //
 // @public
 export function assertIsInstanceOf<T extends Function[]>(value: unknown, ...prototypes: T): asserts value is InstanceOf<T>;
@@ -59,8 +59,8 @@ export function assertIsNotString<T>(value: T): asserts value is Exclude<T, stri
 // @public
 export function assertIsNotSymbol<T>(value: T): asserts value is Exclude<T, symbol>;
 
-// Warning: (ae-forgotten-export) The symbol "Primitive" needs to be exported by the entry point main.d.ts
-// Warning: (ae-forgotten-export) The symbol "TypeOf" needs to be exported by the entry point main.d.ts
+// Warning: (ae-forgotten-export) The symbol "Primitive" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "TypeOf" needs to be exported by the entry point index.d.ts
 //
 // @public
 export function assertIsNotTypeOf<T, U extends Primitive[]>(value: T, ...types: U): asserts value is Exclude<T, TypeOf<U>>;
