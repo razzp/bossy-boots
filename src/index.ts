@@ -63,6 +63,12 @@ export { isUndefined } from './guards/type/isUndefined';
 export { assert } from './utils/assert';
 export { guarantee } from './utils/guarantee';
 
-// Etc
+// Errors
 
 export { AssertionError } from './AssertionError';
+
+// Type Aliases
+
+export type { InstanceOf } from './aliases/InstanceOf';
+export type { Primitive, PrimitiveMap } from './aliases/Primitive';
+export type { TypeOf } from './aliases/TypeOf';

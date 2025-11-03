@@ -25,15 +25,15 @@
     "repository": "github:razzp/bossy-boots",
     "type": "module",
     "sideEffects": false,
-    "main": "./dist/main.cjs",
-    "module": "./dist/main.js",
+    "main": "./dist/bossy-boots.cjs",
+    "module": "./dist/bossy-boots.js",
     "exports": {
         ".": {
-            "import": "./dist/main.js",
-            "require": "./dist/main.cjs"
+            "import": "./dist/bossy-boots.js",
+            "require": "./dist/bossy-boots.cjs"
         }
     },
-    "types": "./dist/main.d.ts",
+    "types": "./dist/bossy-boots.d.ts",
     "files": [
         "dist"
     ],

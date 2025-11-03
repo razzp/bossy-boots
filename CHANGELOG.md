@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1 (2025-11-03)
+
+### Fixed
+
+- Exported module now has a discernable name.
+- Missing type aliases are now exported.
+
 ## 1.1.0 (2025-10-31)
 
 ### Added
