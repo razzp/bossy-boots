@@ -66,7 +66,7 @@ The types(s) to check
 
 **Returns:**
 
-value is Exclude&lt;T, TypeOf&lt;U&gt;&gt;
+value is Exclude&lt;T, [TypeOf](./bossy-boots.typeof.md)<!-- -->&lt;U&gt;&gt;
 
 `true` if check passes, otherwise `false`
 

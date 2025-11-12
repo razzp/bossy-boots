@@ -66,7 +66,7 @@ The prototype(s) to check
 
 **Returns:**
 
-value is Exclude&lt;T, InstanceOf&lt;U&gt;&gt;
+value is Exclude&lt;T, [InstanceOf](./bossy-boots.instanceof.md)<!-- -->&lt;U&gt;&gt;
 
 `true` if check passes, otherwise `false`
 

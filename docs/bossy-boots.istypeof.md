@@ -66,7 +66,7 @@ The types(s) to check
 
 **Returns:**
 
-value is TypeOf&lt;T&gt;
+value is [TypeOf](./bossy-boots.typeof.md)<!-- -->&lt;T&gt;
 
 `true` if check passes, otherwise `false`
 

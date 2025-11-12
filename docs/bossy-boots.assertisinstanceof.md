@@ -66,5 +66,5 @@ The prototype(s) to check
 
 **Returns:**
 
-asserts value is InstanceOf&lt;T&gt;
+asserts value is [InstanceOf](./bossy-boots.instanceof.md)<!-- -->&lt;T&gt;
 
