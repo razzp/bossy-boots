@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.2 (2025-11-12)
+
+### Changed
+- Updated documentation.
+
+### Security
+
+- Updated dependencies.
+
 ## 1.1.1 (2025-11-03)
 
 ### Fixed
@@ -23,7 +32,6 @@
 
 ### Fixed
 
-- JSDoc versions are now correct for all methods.
 - `AssertionError` is now publicly exposed.
 
 ### Security

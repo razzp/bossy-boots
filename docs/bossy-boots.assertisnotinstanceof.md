@@ -66,5 +66,5 @@ The prototype(s) to check
 
 **Returns:**
 
-asserts value is Exclude&lt;T, InstanceOf&lt;U&gt;&gt;
+asserts value is Exclude&lt;T, [InstanceOf](./bossy-boots.instanceof.md)<!-- -->&lt;U&gt;&gt;
 

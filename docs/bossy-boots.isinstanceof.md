@@ -66,7 +66,7 @@ The prototype(s) to check
 
 **Returns:**
 
-value is InstanceOf&lt;T&gt;
+value is [InstanceOf](./bossy-boots.instanceof.md)<!-- -->&lt;T&gt;
 
 `true` if check passes, otherwise `false`
 

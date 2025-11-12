@@ -66,5 +66,5 @@ The types(s) to check
 
 **Returns:**
 
-asserts value is Exclude&lt;T, TypeOf&lt;U&gt;&gt;
+asserts value is Exclude&lt;T, [TypeOf](./bossy-boots.typeof.md)<!-- -->&lt;U&gt;&gt;
 

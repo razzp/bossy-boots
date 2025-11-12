@@ -66,5 +66,5 @@ The types(s) to check
 
 **Returns:**
 
-asserts value is TypeOf&lt;T&gt;
+asserts value is [TypeOf](./bossy-boots.typeof.md)<!-- -->&lt;T&gt;
 
