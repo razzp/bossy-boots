@@ -3,6 +3,7 @@
 ## 1.1.2 (2025-11-12)
 
 ### Changed
+
 - Updated documentation.
 
 ### Security
