@@ -1,3 +1,9 @@
+/**
+ * A helpful collection of type guards and assertions, written in TypeScript.
+ *
+ * @packageDocumentation
+ */
+
 // Assertions > Instance
 
 export { assertIsElement } from './assertions/instance/assertIsElement';

@@ -181,6 +181,4 @@ export type PrimitiveMap = {
 // @public (undocumented)
 export type TypeOf<T> = T extends Array<infer X> ? TypeOf<X> : T extends Primitive ? PrimitiveMap[T] : never;
 
-// (No @packageDocumentation comment for this package)
-
 ```
