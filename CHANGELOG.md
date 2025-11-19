@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.3 (2025-11-19)
+
+### Fixed
+
+- Updated missing annotations.
+- Improved build times.
+
+### Security
+
+- Updated dependencies.
+
 ## 1.1.2 (2025-11-12)
 
 ### Changed
